@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0/dist/themes/light.css" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/b4eff55874.js"></script>
+    <title>The Cheetah | Threats & Conservation</title>
+</head>
+<body>
+
+        <!-- Header section -->
+        <header>
+
+            <!-- Logo image -->
+            <div id="logo">
+                <img src="images/logo.png" href="home.html" alt="">
+            </div>
+
+            <!-- Main navigation bar -->
+            <nav>
+                <ul>
+                    <li><a class="nav-item active" href="#home">home</a></li>
+                    <li><a class="nav-item" href="#cheetah">the cheetah</a></li>
+                    <li><a class="nav-item" href="#conservation">conservation</a></li>
+                    <li><a class="nav-item" href="#about">about iwaf</a></li>
+                    <li><a class="nav-item" href="#contact">contact</a></li>
+                </ul>
+                <div id="menu"><img src="images/menu.png" alt=""></div>
+            </nav>
+
+            <!-- Dropdown navigation bar -->
+            <div id="dropdown-menu">
+                <img id="close" src="images/close.png" alt="" onclick="closeMenu()">
+                <ul>
+                    <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#home">home</a></li>
+                    <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#cheetah">the cheetah</a></li>
+                    <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#conservation">conservation</a></li>
+                    <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#about">about IWAF</a></li>
+                    <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#contact">contact</a></li>
+                </ul>
+            </div>
+        </header>
+
+
+        <div id="page-wrapper">
+
+            <!-- Home section -->
+            <section id="home">
+                <div class="page-container">
+                    <p class="headings">Home</p>
+                </div>
+            </section>
+            
+            <!-- ************************************************* Cheetah section ********************************************************* -->
+            <section id="cheetah">
+
+                 <!-- Vertical navigation menu fo cheetah section -->
+                <div id="vertical-menu">
+                    <ul>
+                        <li onclick="openSection('.ch-tab', '#cheetah-home', '.ch-link', '.cheetah-home')">
+                            <a href="#cheetah"><p class="ch-link cheetah-home menu-active" href="#cheetah">Cheetah</p></a>
+                        </li>
+                        <li onclick="openSection('.ch-tab', '#characteristics', '.ch-link', '.characteristics')">
+                            <a href="#cheetah"><p class="ch-link characteristics" href="#cheetah">Characteristics</p></a>    
+                        </li>
+                        <li onclick="openSection('.ch-tab', '#regions', '.ch-link', '.regions')">
+                            <a href="#cheetah"><p class="ch-link regions" href="#cheetah">Regions</p></a>
+                        </li>
+                        <li onclick="openSection('.ch-tab', '#population', '.ch-link', '.population')">
+                            <a href="#cheetah"><p class="ch-link population" href="#cheetah">Population</p></a>
+                        </li>
+                        <li onclick="openSection('.ch-tab', '#gallery', '.ch-link', '.gallery')">
+                            <a href="#cheetah"><p class="ch-link gallery" href="#cheetah">Gallery</p></a>
+                        </li>
+                    </ul>
+                    <h4 class="menu-label">Cheetah</h4>
+                </div>
+
+                 <!-- Vertical navigation menu for conservation section -->
+                 <div id="vertical-mobile-menu">
+                    <p class="mobile-menu-label ch-label">Cheetah Home</p>
+                    <ul>
+                        <li onclick="openSectionMobile('.ch-tab', '#cheetah-home', '.ch-mobile-link', '.cheetah-home-mobile', 'Cheetah Home')">
+                            <a href="#cheetah"><p class="ch-mobile-link cheetah-home-mobile mobile-menu-active"></p></a>
+                        </li>
+                        <li onclick="openSectionMobile('.ch-tab', '#characteristics', '.ch-mobile-link', '.characteristics-mobile', 'Characteristics')">
+                            <a href="#cheetah"><p class="ch-mobile-link characteristics-mobile"></p></a>
+                        </li>
+                        <li onclick="openSectionMobile('.ch-tab', '#regions', '.ch-mobile-link', '.regions-mobile', 'Regions')">
+                            <a href="#cheetah"><p class="ch-mobile-link regions-mobile"></p></a>
+                        </li>
+                        <li onclick="openSectionMobile('.ch-tab', '#population', '.ch-mobile-link', '.population-mobile', 'Population')">
+                            <a href="#cheetah"><p class="ch-mobile-link population-mobile"></p></a>
+                        </li>
+                        <li onclick="openSectionMobile('.ch-tab', '#gallery', '.ch-mobile-link', '.gallery-mobile', 'Gallery')">
+                            <a href="#cheetah"><p class="ch-mobile-link gallery-mobile"></p></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cheetah Home page -->
+                <div id="cheetah-home" class="ch-tab center">
+                    <div class="page-container">
+                        <p class="headings">Cheetah Home</p>
+                    </div>
+                </div>
+
+                <!-- Cheetah Characteristics page -->
+                <div id="characteristics" class="ch-tab">
+                    <div class="page-container">
+                        <p class="headings">Cheetah Characteristics</p> 
+                    </div>
+                </div>
+
+                <!--  Cheetah Regions page  -->
+                <div id="regions" class="ch-tab">
+                    <div class="page-container">
+                        <p class="headings">Cheetah Regions</p>
+                    </div>
+                </div>
+
+                <!--  Cheetah population page  -->
+                <div id="population" class="ch-tab">
+                    <div class="page-container">
+                        <p class="headings">Cheetah Population</p>
+                    </div>
+                </div>
+
+                <!--  Cheetah Gallery page  -->
+                <div id="gallery" class="ch-tab">
+                    <div class="page-container">
+                        <p class="headings">Cheetah Gallery</p>
+                    </div>
+                </div>
+
+            </section>
+            
+            <!-- ************************************************Conservation section ****************************************************** -->
+            <section id="conservation">
+
+                <!-- Vertical navigation menu for conservation section -->
+                 <div id="vertical-menu">
+                    <ul>
+                        <li onclick="openSection('.co-tab', '#conservation-home', '.co-link', '.conservation-home')">
+                            <a href="#conservation"><p class="co-link conservation-home menu-active">Conservation</p></a>
+                        </li>
+                        <li onclick="openSection('.co-tab', '#habitat', '.co-link', '.habitat')">
+                            <a href="#conservation"><p class="co-link habitat">Habitat</p></a>
+                        </li>
+                        <li onclick="openSection('.co-tab', '#education', '.co-link', '.education')">
+                            <a href="#conservation"><p class="co-link education">Education</p></a>
+                        </li>
+                        <li onclick="openSection('.co-tab', '#livelihood', '.co-link', '.livelihood')">
+                            <a href="#conservation"><p class="co-link livelihood">livelihood</p></a>
+
+                        </li>
+                        <li onclick="openSection('.co-tab', '#sustainability', '.co-link', '.sustainability')">
+                            <a href="#conservation"><p class="co-link sustainability">Sustainability</p></a>
+                        </li>
+                    </ul>
+                    <p class="menu-label">Conservation</p>
+                </div>
+
+                 <!-- Vertical navigation menu for conservation section -->
+                 <div id="vertical-mobile-menu">
+                    <p class="mobile-menu-label co-label">Conservation Home</p>
+                    <ul>
+                        <li onclick="openSectionMobile('.co-tab', '#conservation-home', '.co-mobile-link', '.conservation-home-mobile', 'Conservation Home')">
+                            <a href="#conservation"><p class="co-mobile-link conservation-home-mobile mobile-menu-active"></p></a>
+                        </li>
+                        <li onclick="openSectionMobile('.co-tab', '#habitat', '.co-mobile-link', '.habitat-mobile', 'Habitat')">
+                            <a href="#conservation"><p class="co-mobile-link habitat-mobile"></p></a>
+                        </li>
+                        <li onclick="openSectionMobile('.co-tab', '#education', '.co-mobile-link', '.education-mobile', 'Education')">
+                            <a href="#conservation"><p class="co-mobile-link education-mobile"></p></a>
+                        </li>
+                        <li onclick="openSectionMobile('.co-tab', '#livelihood', '.co-mobile-link', '.livelihood-mobile', 'Livelihood')">
+                            <a href="#conservation"><p class="co-mobile-link livelihood-mobile"></p></a>
+                        </li>
+                        <li onclick="openSectionMobile('.co-tab', '#sustainability', '.co-mobile-link', '.sustainability-mobile', 'Sustainability')">
+                            <a href="#conservation"><p class="co-mobile-link sustainability-mobile"></p></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cheetah home page -->
+                <div id="conservation-home" class="co-tab center">
+                    <div class="page-container">
+                        <p class="headings">Conservation Home</p>
+                    </div>
+                </div>
+
+                <!-- Cheetah habitat page -->
+                <div id="habitat" class="co-tab">
+                    <div class="page-container">
+                        <p class="headings">Conservation Habitat</p>
+                    </div>
+                </div>
+
+                <!-- Cheetah education page -->
+                <div id="education" class="co-tab">
+                    <div class="page-container">
+                        <p class="headings">Conservation Education</p>
+                    </div>
+                </div>
+
+                <!-- Cheetah liveilhood page -->
+                <div id="livelihood" class="co-tab">
+                    <div class="page-container">
+                        <p class="headings">Conservation Livelihood</p>
+                    </div>
+                </div>
+
+                <!-- Cheetah sustainability page -->
+                <div id="sustainability" class="co-tab">
+                    <div class="page-container">
+                        <p class="headings">Conservation Sustainability</p>
+                    </div>
+                </div>
+
+            </section> 
+
+            <!-- About section -->
+            <section id="about">
+                <div class="page-container">
+                    <p class="headings">About</p>
+                </div>
+            </section>
+
+            <!-- Contact section -->
+            <section id="contact">
+                <div class="page-container">
+                    <p class="headings">Contact</p>
+                </div>
+            </section>
+
+            <!-- Footer section section -->
+            <footer>&copy 2022 Mark McLachlan</footer>
+        </div>
+        
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0/dist/shoelace.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="main.js"></script> 
+</body>
+</html>
