@@ -1,8 +1,5 @@
-@import "image.css";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Tiro+Telugu&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&display=swap');
 
 * {
     box-sizing: border-box;
@@ -45,6 +42,8 @@ header {
     top: 0;
     left: 0;
     z-index: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 2px 2px 5px var(--champagne);
 }
 
 header img, #menu img {
@@ -82,6 +81,10 @@ nav ul li a{
 nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
     cursor: pointer;
     opacity: 0.7;
+}
+
+#menu {
+    z-index: 10;
 }
 
 @media screen and (max-width: 768px) {
@@ -153,6 +156,7 @@ section p {
     flex-basis: 20vw;
     position: absolute;
     right: 5vw;
+    z-index: 5;
 }
 
 #vertical-menu ul {
@@ -200,9 +204,10 @@ section p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    bottom: 40px;
+    bottom: 50px;
     left: 0;
     width: 100vw;
+    z-index: 5;
 }
 
 #vertical-mobile-menu ul{
@@ -239,22 +244,15 @@ section p {
     }
 }
 
-
-
-
-
-
-
-
-
-/* ======================================== All sections Layout ============================================== */
+/* ====================================================================================== */
+/* ================================ Main sections Layout ========================================= */
+/* ====================================================================================== */
 #home, #cheetah, #conservation, #about, #contact {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     color: white;
-    /* border-bottom: solid 1px var(--champagne); */
+    box-shadow: 0 4px 2px -2px var(--champagne);
 }
 
 #characteristics, #regions, #population, #gallery {
@@ -268,20 +266,865 @@ section p {
 }
 
 #cheetah-home, #conservation-home {
-    width: 100vw;
-}
-
-.page-container {
+    width: 80vw;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 75vh;
-    width: 100%;
-    /* background: grey; */
+    justify-content: left;
 }
 
 footer {
     height: 4vh;
     color: white;
     text-align: center;
+}
+
+/* ====================================================================================== */
+/* ================================ Home Layout ========================================= */
+/* ====================================================================================== */
+.home-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/c11.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    width: 100vw;
+}
+
+.home-item {
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+#home h1 {
+    color: var(--champagne);
+    font-size: 4rem;
+    letter-spacing: 9px;
+    font-family: 'Cinzel', serif;
+    margin-top: 100px;
+    border-radius: 50px;
+    text-shadow: 2px 2px 2px  rgb(0, 0, 0);
+}
+
+#home h4 {
+    margin-top: 5px;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    font-style: italic;
+    color: white;
+    font-family: 'Cinzel', serif;
+    font-weight: 100;
+}
+
+.play {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 3px solid var(--champagne);
+    border-radius: 50px;
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play i {
+    color: var(--champagne);
+    font-size: 30px;
+}
+
+.play:hover {
+    cursor: pointer;
+    opacity: .7;
+    scale: 1.2;
+}
+
+.video-wrapper {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(34, 34, 34, 0.95);
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.video {
+    width: 854px;
+    height: 480px;
+    border: solid 10px white;
+}
+
+@media screen and (max-width: 1048px) {
+
+    .video {
+        width: 534px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home-content {
+        flex-direction: column;
+    }
+
+    .home-item {
+        width: 100%;
+        padding-top: 110px;
+    }
+
+    .home-image {
+        margin-top: 20px;
+        height: 300px;
+    }
+    .video {
+        width: 356px;
+        height: 200px;
+    }
+
+    #home h1 {
+        font-size: 2.4em;
+    }
+    
+    #home h4 {
+        font-size: 1.6em;
+    }
+}
+
+@media screen and (max-width: 468px) {
+
+    #home h1 {
+        font-size: 1.8em;
+    }
+    
+    #home h4 {
+        font-size: 1em;
+    }
+}
+
+/* ============================================================================================== */
+/* ================================ Cheetah home layout ========================================= */
+/* ============================================================================================== */
+
+
+.cheetah-home-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/c1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    width: 50vw;
+}
+
+@media screen and (max-width: 1024px) {
+   
+    .cheetah-home-content {
+        height: 70vh;
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+   
+    .cheetah-home-content {
+        height: 40vh;
+        width: 95vw;
+    }
+}
+
+/* ========================================================================================================= */
+/* ================================ Cheetah characteristics layout ========================================= */
+/* ========================================================================================================= */
+
+.cheetah-characteristics-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+    width: 75vw;
+    padding: 20px;
+}
+
+.characteristics-img {
+    background-image: url('images/cheetah-stride.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 300px;
+    width: 90%;
+}
+
+sl-tab-group {
+    width: 100%;
+    margin-top: 5vh;
+    --indicator-color: var(--champagne);
+}
+
+#sl-tab-1::part(base),
+#sl-tab-2::part(base),
+#sl-tab-3::part(base),
+#sl-tab-4::part(base),
+#sl-tab-5::part(base),
+#sl-tab-6::part(base) {
+    color: white;
+    padding: 10px 100px;  
+}
+
+#sl-tab-panel-1::part(base),
+#sl-tab-panel-2::part(base),
+#sl-tab-panel-3::part(base),
+#sl-tab-panel-4::part(base),
+#sl-tab-panel-5::part(base),
+#sl-tab-panel-6::part(base) {
+    color: var(--champagne);
+    text-align: center;
+    margin-top: 10px;
+    padding: 60px 30px;
+    border: solid black 5px;
+    border-radius: 20px;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    #sl-tab-1::part(base),
+    #sl-tab-2::part(base),
+    #sl-tab-3::part(base),
+    #sl-tab-4::part(base),
+    #sl-tab-5::part(base),
+    #sl-tab-6::part(base) {
+        padding: 10px 60px;  
+    }
+
+    .cheetah-characteristics-content { 
+        width: 95vw;
+     }
+}
+
+@media screen and (max-width: 768px) {
+
+    #sl-tab-1::part(base),
+    #sl-tab-2::part(base),
+    #sl-tab-3::part(base),
+    #sl-tab-4::part(base),
+    #sl-tab-5::part(base),
+    #sl-tab-6::part(base) {
+        padding: 10px 40px;  
+    }
+
+    .cheetah-characteristics-content { 
+        width: 100vw;
+     }
+}
+
+@media screen and (max-width: 500px) {
+
+    #sl-tab-1::part(base),
+    #sl-tab-2::part(base),
+    #sl-tab-3::part(base),
+    #sl-tab-4::part(base),
+    #sl-tab-5::part(base),
+    #sl-tab-6::part(base) {
+        padding: 10px 20px;  
+    }
+}
+
+
+/* ========================================================================================================= */
+/* ================================ Cheetah region layout ================================================== */
+/* ========================================================================================================= */
+
+.cheetah-regions-content {
+    margin-top: 100px;
+    height: 80vh;
+    width: 90vw;
+}
+
+.region-tooltip-content {
+    display: none;
+    text-align: left;
+    position: absolute;
+    top: 55%;
+    left: 15%;
+    width: 200px;
+    height: 200px;
+}
+
+.region-tooltip-content.default {
+    display: block;
+}
+
+.region-tooltip-content h1 {
+    color: var(--champagne);
+    margin-bottom: 10px;
+}
+
+.region-image-wrapper {
+    background-image: url('images/cheetah-map.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+sl-button::part(base) {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+/* Algeria */
+.spot:nth-of-type(1){
+    position: absolute;
+    top: 15%;
+    left: 41%;  
+}
+
+/* Ethiopia */
+.spot:nth-of-type(2){
+    position: absolute;
+    top: 38%;
+    left: 60%;
+}
+
+/*  Kenya */
+.spot:nth-of-type(3){
+    position: absolute;
+    top: 48%;
+    left: 60%;
+}
+
+/*  Botswana */
+.spot:nth-of-type(4){
+    position: absolute;
+    top: 78%;
+    left: 53%;
+}
+
+/*  Sudan */
+.spot:nth-of-type(5){
+    position: absolute;
+    top: 27%;
+    left: 56% 
+}
+
+sl-button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    animation: pulse 1s ease infinite;
+}
+
+@media screen and (max-width: 1024px) {
+    #regions {
+        margin-top: 0px;
+    }
+
+    .region-tooltip-content {
+        left: 10%;
+    }
+
+    .region-image-wrapper {
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .region-tooltip-content {
+        text-align: center;
+        top: 57vh;
+        left: 0;
+        width: 100vw;
+        padding: 0 5px;
+    }
+
+    .region-image-wrapper {
+        height: 70%;
+    }
+} 
+
+/* ============================================================================================================= */
+/* ================================ Cheetah population layout ================================================== */
+/* ============================================================================================================= */
+
+.cheetah-population-content {
+    width: 78vw;
+    height: 70vh;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.cheetah-population-content h1 {
+    font-family: 'Cinzel', serif;
+    color: white;
+    text-shadow: 2px 2px 2px var(--champagne);
+    margin: 100px 0;
+    text-transform: uppercase;
+}
+
+.cheetah-population-content .headings {
+    font-size: 2rem; 
+}
+
+.population-number {
+    font-size: 3rem;
+} 
+
+.population-active {
+border: solid 3px var(--champagne);
+scale: 1.8;
+animation: timelinePulse 1s ease infinite;
+}
+    
+.timeline {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+.bar {
+    padding: 30px 35px;
+    display: flex;
+    justify-content: center;
+    border-top: 4px solid var(--champagne);
+    position: relative;
+    transition: all 200ms ease-in ; 
+    color: var(--champagne);
+}
+
+.tip, .tip-end {
+    content: '';
+    background-color: white;
+    position: absolute;
+    transition: all 200ms ease-in;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    top: -15px;
+}
+
+.tip:hover {
+    cursor: pointer;
+    border: solid 1px var(--champagne);
+    scale: 1.5;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .cheetah-population-content {
+        width: 95vw;
+    }
+
+    .cheetah-population-content .headings {
+        font-size: 1.5rem;  
+    }
+    
+    .population-number {
+        font-size: 2rem;
+    } 
+}
+
+@media screen and (max-width: 768px) {
+    
+    .bar {
+        padding: 30px 20px;
+    }
+
+    /* .timeline {
+        rotate: 90deg;
+    } */
+}
+
+@media screen and (max-width: 500px) {
+    .bar {
+        padding: 30px 8px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .bar {
+        padding: 30px 5px;
+    }
+
+    .cheetah-population-content .headings {
+        font-size: 1rem; 
+    }
+}
+    
+
+/* ============================================================================================================= */
+/* ================================ Cheetah Gallery layout ================================================== */
+/* ============================================================================================================= */
+
+.cheetah-gallery-content{
+    height: 100vh;
+    width: 75vw;
+    position: relative;
+}
+
+#main-img {
+    height: 60%;
+    border: solid white 10px;
+    transition: 0.5s;
+}
+
+/* Slider images and arrow styling */
+#slider {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+}
+
+#slider-images {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    width: 65vw;
+    overflow: hidden; 
+    gap: 10px;
+}
+
+.slider-img {
+    width: 32.5%;
+    transition: 0.5s;
+    border: 3px solid white;
+}
+
+.slider-img:hover {
+    opacity: .7;
+    cursor: pointer;
+}
+
+#left-arrow, #right-arrow {
+    flex: 1;
+}
+
+#left-arrow {
+ text-align: right;
+}
+
+
+.fa-angle-left, .fa-angle-right {
+    font-size: 50px; 
+    color: white;
+    padding: 20px;
+}
+
+.fa-angle-left:hover, .fa-angle-right:hover {
+   opacity: .8; 
+   scale: 1.3;
+   cursor: pointer;
+}
+
+#main-img:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.gallery-image {
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    background-color: rgba(34, 34, 34, 0.95);
+    height: 100vh;
+    width: 100vw;
+    z-index: 4;
+}
+
+@media screen and (max-width: 1024px) {
+    .cheetah-gallery-content{
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .slider-img {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .slider-img {
+        width: 80%;
+    }
+}
+
+
+  
+
+
+
+/* Close media styling */
+.close-media {
+    font-size: 3em;
+    font-weight: bold;
+    position: absolute;
+    color: white;
+    top: 100px;
+    left: 0;
+    height: 70px;
+    transition: 0.5s ease-in-out;
+    width: 100%;
+}
+
+.close-media:hover {
+    cursor: pointer;
+    rotate: 360deg;
+    scale: 1.3;
+    opacity: .7;
+}
+
+
+/* ============================================================================================== */
+/* ================================ Conservation home layout ========================================= */
+/* ============================================================================================== */
+
+.conservation-home-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/c3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    width: 50vw;
+}
+
+@media screen and (max-width: 1024px) {
+   
+    .conservation-home-content {
+        height: 70vh;
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+   
+    .conservation-home-content {
+        height: 40vh;
+        width: 95vw;
+    }
+}
+
+
+/* ======================== Coservation content - habitat, education, livelihood, sustainability, about =============================== */
+
+.conservation-habitat-content,
+.conservation-education-content,
+.conservation-livelihood-content,
+.conservation-sustainability-content,
+.about-content {
+    
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    
+    gap: 50px;
+    padding: 0px 100px;
+}
+
+.content-wrapper > h1 {
+    text-transform: uppercase;
+    color: var(--champagne);
+}
+
+.content-wrapper > p {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.get-involved, .newsletter {
+    padding: 7px 12px;
+    border-radius: 10px;
+    font-size: 1em;
+}
+
+.get-involved {
+    background-color: var(--champagne);
+    color: white;
+    border: solid 1px white;
+}
+
+.button-wrapper {
+    margin-top: 20px;
+}
+
+.get-involved:hover {
+    cursor: pointer;
+    opacity: .7;
+}
+
+.newsletter {
+    background-color: white;
+    color: var(--champagne);
+    border: solid 1px var(--champagne);
+    margin-left: 50px;
+}
+
+.newsletter:hover, .get-involved:hover {
+    cursor: pointer;
+    opacity: .7;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .content-wrapper {
+        width: 100vw;
+        justify-content: center;
+        align-items: left;
+        gap: 20px;
+        padding: 50px;
+        background-color: aqua;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .content-wrapper {
+        padding: 20px;
+    }
+
+    .content-wrapper > h1 {
+        font-size: 1.2em;
+    }
+    
+    .content-wrapper > p {
+        font-size: .8em;
+    }
+
+    .get-involved, .newsletter {
+        font-size: .8em;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .content-wrapper > h1 {
+        font-size: 1.2em;
+    }
+    
+    .content-wrapper > p {
+        font-size: .8em;
+    }
+
+    .get-involved, .newsletter {
+        font-size: .8em;
+    }
+}
+
+
+/* ======================================================================================== */
+/* ================================ Contact Layout ========================================= */
+/* ======================================================================================== */
+.contact-content {
+    padding: 200px 50px 50px 50px;
+    text-align: center;
+    
+}
+
+.contact-form {
+    width: 80%;
+}
+
+.contact-form > input {
+    width: 40vw;
+    border: solid 1px var(--champagne);
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+.contact-form input:nth-of-type(1),
+.contact-form input:nth-of-type(2),
+.contact-form input:nth-of-type(3) {
+    height: 50px;
+}
+
+
+.contact-form input:nth-of-type(4) {
+    height: 150px
+}
+
+.contact-content > p {
+    color: var(--champagne);
+    padding: 30px 0;
+}
+
+@media screen and (max-width: 900px) {
+
+    .contact-content {
+        padding-top: 150px
+    }
+
+    .contact-form {
+        width: 90vw;
+    }
+
+    .contact-form > input{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .contact-content {
+        padding-top: 100px
+    }
+}
+
+
+
+/* ======================================================================================== */
+/* ================================ Keyframes ============================================= */
+/* ======================================================================================== */
+
+/*  Timeline */
+@keyframes timelinePulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+/* Pulse styling for region hotspots */ 
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0.4;
+    }
 }

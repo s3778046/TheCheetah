@@ -7,10 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0/dist/themes/light.css" />
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/b4eff55874.js"></script>
-    <title>The Cheetah | Threats & Conservation</title>
+    <title>Cheetah</title>
 </head>
-<body>
-
         <!-- Header section -->
         <header>
 
@@ -49,8 +47,21 @@
 
             <!-- Home section -->
             <section id="home">
-                <div class="page-container">
-                    <p class="headings">Home</p>
+                <div class="page-container home-content"> 
+                    <div class="home-item">
+                        <h1>The Cheetah</h1>
+                        <h4>Threats & Conservation</h4>
+                        <!-- <div class="play" onclick="openVideo()">
+                            <i class="fa fa-play"></i>
+                        </div> -->
+                    </div>
+                    <!-- <div class="video-wrapper">
+                        <p class="close-media center" onclick="closeVideo()">X</p>
+                        <iframe class="video" src="https://www.youtube.com/embed/qRjVJPdmngc"
+                        title="Cheetah Conservation I Episode 1 I The Selati Conservation Series" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen></iframe>
+                    </div> -->
                 </div>
             </section>
             
@@ -60,19 +71,24 @@
                  <!-- Vertical navigation menu fo cheetah section -->
                 <div id="vertical-menu">
                     <ul>
-                        <li onclick="openSection('.ch-tab', '#cheetah-home', '.ch-link', '.cheetah-home')">
+                        <li onclick="openSection('.ch-tab', '#cheetah-home', '.ch-link', '.cheetah-home'), 
+                                    animateSection('.cheetah-home-content')">
                             <a href="#cheetah"><p class="ch-link cheetah-home menu-active" href="#cheetah">Cheetah</p></a>
                         </li>
-                        <li onclick="openSection('.ch-tab', '#characteristics', '.ch-link', '.characteristics')">
+                        <li onclick="openSection('.ch-tab', '#characteristics', '.ch-link', '.characteristics'), 
+                                    animateSection('.cheetah-characteristics-content')">
                             <a href="#cheetah"><p class="ch-link characteristics" href="#cheetah">Characteristics</p></a>    
                         </li>
-                        <li onclick="openSection('.ch-tab', '#regions', '.ch-link', '.regions')">
+                        <li onclick="openSection('.ch-tab', '#regions', '.ch-link', '.regions'),
+                                    animateSection('.cheetah-regions-content')">
                             <a href="#cheetah"><p class="ch-link regions" href="#cheetah">Regions</p></a>
                         </li>
-                        <li onclick="openSection('.ch-tab', '#population', '.ch-link', '.population')">
+                        <li onclick="openSection('.ch-tab', '#population', '.ch-link', '.population'),
+                                    animateSection('.cheetah-population-content')">
                             <a href="#cheetah"><p class="ch-link population" href="#cheetah">Population</p></a>
                         </li>
-                        <li onclick="openSection('.ch-tab', '#gallery', '.ch-link', '.gallery')">
+                        <li onclick="openSection('.ch-tab', '#gallery', '.ch-link', '.gallery'),
+                                    animateSection('.cheetah-gallery-content')">
                             <a href="#cheetah"><p class="ch-link gallery" href="#cheetah">Gallery</p></a>
                         </li>
                     </ul>
@@ -83,19 +99,24 @@
                  <div id="vertical-mobile-menu">
                     <p class="mobile-menu-label ch-label">Cheetah Home</p>
                     <ul>
-                        <li onclick="openSectionMobile('.ch-tab', '#cheetah-home', '.ch-mobile-link', '.cheetah-home-mobile', 'Cheetah Home')">
+                        <li onclick="openSectionMobile('.ch-tab', '#cheetah-home', '.ch-mobile-link', '.cheetah-home-mobile', 'Cheetah Home'), 
+                                    animateSection('.cheetah-home-content')">
                             <a href="#cheetah"><p class="ch-mobile-link cheetah-home-mobile mobile-menu-active"></p></a>
                         </li>
-                        <li onclick="openSectionMobile('.ch-tab', '#characteristics', '.ch-mobile-link', '.characteristics-mobile', 'Characteristics')">
+                        <li onclick="openSectionMobile('.ch-tab', '#characteristics', '.ch-mobile-link', '.characteristics-mobile', 'Characteristics'),
+                                    animateSection('.cheetah-characteristics-content')">
                             <a href="#cheetah"><p class="ch-mobile-link characteristics-mobile"></p></a>
                         </li>
-                        <li onclick="openSectionMobile('.ch-tab', '#regions', '.ch-mobile-link', '.regions-mobile', 'Regions')">
+                        <li onclick="openSectionMobile('.ch-tab', '#regions', '.ch-mobile-link', '.regions-mobile', 'Regions'),
+                                    animateSection('.cheetah-regions-content')">
                             <a href="#cheetah"><p class="ch-mobile-link regions-mobile"></p></a>
                         </li>
-                        <li onclick="openSectionMobile('.ch-tab', '#population', '.ch-mobile-link', '.population-mobile', 'Population')">
+                        <li onclick="openSectionMobile('.ch-tab', '#population', '.ch-mobile-link', '.population-mobile', 'Population'),
+                                    animateSection('.cheetah-population-content')">
                             <a href="#cheetah"><p class="ch-mobile-link population-mobile"></p></a>
                         </li>
-                        <li onclick="openSectionMobile('.ch-tab', '#gallery', '.ch-mobile-link', '.gallery-mobile', 'Gallery')">
+                        <li onclick="openSectionMobile('.ch-tab', '#gallery', '.ch-mobile-link', '.gallery-mobile', 'Gallery'),
+                                    animateSection('.cheetah-gallery-content')">
                             <a href="#cheetah"><p class="ch-mobile-link gallery-mobile"></p></a>
                         </li>
                     </ul>
@@ -103,36 +124,130 @@
 
                 <!-- Cheetah Home page -->
                 <div id="cheetah-home" class="ch-tab center">
-                    <div class="page-container">
-                        <p class="headings">Cheetah Home</p>
-                    </div>
+                    <div class="page-container cheetah-home-content"></div>
                 </div>
 
                 <!-- Cheetah Characteristics page -->
                 <div id="characteristics" class="ch-tab">
-                    <div class="page-container">
-                        <p class="headings">Cheetah Characteristics</p> 
+                    <div class="page-container cheetah-characteristics-content">
+
+                        <div class="characteristics-img"></div>
+                        <sl-tab-group>
+                            <sl-tab slot="nav" panel="speed">Speed</sl-tab>
+                            <sl-tab slot="nav" panel="color">Color</sl-tab>
+                            <sl-tab slot="nav" panel="habitat">Habitat</sl-tab>
+                            <sl-tab slot="nav" panel="height">Height</sl-tab>
+                            <sl-tab slot="nav" panel="diet">Diet</sl-tab>
+                            <sl-tab slot="nav" panel="weight">Weight</sl-tab>
+                            
+                            
+                          
+                            <sl-tab-panel name="speed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacinia quis vel eros donec ac odio tempor.</sl-tab-panel>
+                            <sl-tab-panel name="color">Nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Neque egestas congue quisque egestas diam in. Tincidunt eget nullam non nisi.</sl-tab-panel>
+                            <sl-tab-panel name="habitat">Turpis egestas pretium aenean pharetra magna ac. Pulvinar pellentesque habitant morbi tristique senectus et. Ultricies lacus sed turpis tincidunt id.</sl-tab-panel>
+                            <sl-tab-panel name="height">Cras sed felis eget velit. Viverra aliquet eget sit amet tellus. Egestas purus viverra accumsan in nisl nisi scelerisque eu. Tincidunt lobortis feugiat vivamus at augue.</sl-tab-panel>
+                            <sl-tab-panel name="diet">Nec dui nunc mattis enim ut tellus. Laoreet sit amet cursus sit amet. Vitae auctor eu augue ut lectus. Arcu cursus vitae congue mauris rhoncus aenean vel.</sl-tab-panel>
+                            <sl-tab-panel name="weight">Condimentum lacinia quis vel eros donec ac. Viverra suspendisse potenti nullam ac. Blandit libero volutpat sed cras. Adipiscing diam donec adipiscing tristique.</sl-tab-panel>
+                        </sl-tab-group>
                     </div>
                 </div>
 
                 <!--  Cheetah Regions page  -->
                 <div id="regions" class="ch-tab">
-                    <div class="page-container">
-                        <p class="headings">Cheetah Regions</p>
+                    <div class="page-container cheetah-regions-content">
+                        <div class="region-tooltip-content default">
+                            <h1>Hotspots</h1>
+                            <p>Click on a hotspot to reveal data on the selected country.</p>
+                        </div>
+    
+                        <div class="region-tooltip-content algeria">
+                            <h1>Algeria</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla cum laborum.</p>
+                        </div>
+    
+                        <div class="region-tooltip-content ethiopia">
+                            <h1>Ethiopia</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla cum laborum.</p>
+                        </div>
+    
+                        <div class="region-tooltip-content kenya">
+                            <h1>Kenya</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla cum laborum.</p>
+                        </div>
+    
+                        <div class="region-tooltip-content botswana">
+                            <h1>Botswana</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla cum laborum.</p>
+                        </div>
+    
+                        <div class="region-tooltip-content sudan">
+                            <h1>Sudan</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla cum laborum.</p>
+                        </div>
+    
+                        <div class="region-image-wrapper">
+                            <div class="spot"><sl-tooltip content="Algeria"><sl-button onclick="displayHotSpotData('.algeria')"></sl-button></sl-tooltip></div> 
+                            <div class="spot"><sl-tooltip content="Ethiopia"><sl-button onclick="displayHotSpotData('.ethiopia')"></sl-button></sl-tooltip></div>
+                            <div class="spot"><sl-tooltip content="Kenya"><sl-button onclick="displayHotSpotData('.kenya')"></sl-button></sl-tooltip></div>
+                            <div class="spot"><sl-tooltip content="Botswana"><sl-button onclick="displayHotSpotData('.botswana')"></sl-button></sl-tooltip></div>
+                            <div class="spot"><sl-tooltip content="Sudan"><sl-button onclick="displayHotSpotData('.sudan')"></sl-button></sl-tooltip></div>
+                        </div>
                     </div>
                 </div>
 
                 <!--  Cheetah population page  -->
                 <div id="population" class="ch-tab">
-                    <div class="page-container">
-                        <p class="headings">Cheetah Population</p>
+                    <div class="page-container cheetah-population-content">
+                        <h1 class="headings">Cheetah population</h1>
+
+                        <!-- Timeline wrapper -->
+                        <div class="timeline" id="timeline">
+
+                            <!-- Timeline components -->
+                            <div class="bar"><span class="tip" onclick="togglePopulation(0, '600,000')"></span>1970</div>
+                            <div class="bar"><span class="tip" onclick="togglePopulation(1, '500,000')"></span>1980</div>
+                            <div class="bar"><span class="tip" onclick="togglePopulation(2, '300,000')"></span>1990</div>
+                            <div class="bar"><span class="tip" onclick="togglePopulation(3, '200,000')"></span>2000</div>
+                            <div class="bar"><span class="tip" onclick="togglePopulation(4, '150,000')"></span>2010</div>
+                            <div class="bar"><span class="tip population-active" onclick="togglePopulation(5, '100,000')"></span>2023</div>
+                        </div>  
+                        <h1 class="population-number">100,000</h1>
                     </div>
                 </div>
 
                 <!--  Cheetah Gallery page  -->
                 <div id="gallery" class="ch-tab">
-                    <div class="page-container">
-                        <p class="headings">Cheetah Gallery</p>
+                    <div class="page-container cheetah-gallery-content center">
+                        
+
+                        <div class="gallery-image">
+                            <p class="close-media center" onclick="closeImage()">X</p>
+                            <img id="main-img" src="" alt="Main Image">
+                        </div>
+                
+                        <!-- Slider with images and  -->
+                        <div id="slider">
+                
+                            <!--  Left arrow -->
+                            <div id="left-arrow"><i class="fas fa-angle-left"></i></div>
+                
+                            <!-- Images -->
+                            <div id="slider-images">
+                                <img class="slider-img img1" src="./images/slider_images/s1.jpg" alt="Cheetah 1">
+                                <img class="slider-img img2" src="./images/slider_images/s2.jpg" alt="Cheetah 2">
+                                <img class="slider-img img3" src="./images/slider_images/s3.jpg" alt="Cheetah 3">
+                                <img class="slider-img img4" src="./images/slider_images/s4.jpg" alt="Cheetah 4">
+                                <img class="slider-img img5" src="./images/slider_images/s5.jpg" alt="Cheetah 5">
+                                <img class="slider-img img6" src="./images/slider_images/s6.jpg" alt="Cheetah 6">
+                                <img class="slider-img img7" src="./images/slider_images/s9.jpg" alt="Cheetah 7">
+                                <img class="slider-img img8" src="./images/slider_images/s8.jpg" alt="Cheetah 8">
+                                <img class="slider-img img9" src="./images/slider_images/s9.jpg" alt="Cheetah 9">
+                                
+                            </div>
+                
+                            <!-- Right arrow -->
+                            <div id="right-arrow"><i class="fas fa-angle-right"></i></div> 
+                        </div>
                     </div>
                 </div>
 
@@ -144,20 +259,25 @@
                 <!-- Vertical navigation menu for conservation section -->
                  <div id="vertical-menu">
                     <ul>
-                        <li onclick="openSection('.co-tab', '#conservation-home', '.co-link', '.conservation-home')">
+                        <li onclick="openSection('.co-tab', '#conservation-home', '.co-link', '.conservation-home'), 
+                                    animateSection('.conservation-home-content')">
                             <a href="#conservation"><p class="co-link conservation-home menu-active">Conservation</p></a>
                         </li>
-                        <li onclick="openSection('.co-tab', '#habitat', '.co-link', '.habitat')">
+                        <li onclick="openSection('.co-tab', '#habitat', '.co-link', '.habitat'), 
+                                    animateSection('.conservation-habitat-content')">
                             <a href="#conservation"><p class="co-link habitat">Habitat</p></a>
                         </li>
-                        <li onclick="openSection('.co-tab', '#education', '.co-link', '.education')">
+                        <li onclick="openSection('.co-tab', '#education', '.co-link', '.education'), 
+                                    animateSection('.conservation-education-content')">
                             <a href="#conservation"><p class="co-link education">Education</p></a>
                         </li>
-                        <li onclick="openSection('.co-tab', '#livelihood', '.co-link', '.livelihood')">
+                        <li onclick="openSection('.co-tab', '#livelihood', '.co-link', '.livelihood'), 
+                                    animateSection('.conservation-livelihood-content')">
                             <a href="#conservation"><p class="co-link livelihood">livelihood</p></a>
 
                         </li>
-                        <li onclick="openSection('.co-tab', '#sustainability', '.co-link', '.sustainability')">
+                        <li onclick="openSection('.co-tab', '#sustainability', '.co-link', '.sustainability'), 
+                                    animateSection('.conservation-sustainability-content')">
                             <a href="#conservation"><p class="co-link sustainability">Sustainability</p></a>
                         </li>
                     </ul>
@@ -168,19 +288,24 @@
                  <div id="vertical-mobile-menu">
                     <p class="mobile-menu-label co-label">Conservation Home</p>
                     <ul>
-                        <li onclick="openSectionMobile('.co-tab', '#conservation-home', '.co-mobile-link', '.conservation-home-mobile', 'Conservation Home')">
+                        <li onclick="openSectionMobile('.co-tab', '#conservation-home', '.co-mobile-link', '.conservation-home-mobile', 'Conservation Home'), 
+                                    animateSection('.conservation-home-content')">
                             <a href="#conservation"><p class="co-mobile-link conservation-home-mobile mobile-menu-active"></p></a>
                         </li>
-                        <li onclick="openSectionMobile('.co-tab', '#habitat', '.co-mobile-link', '.habitat-mobile', 'Habitat')">
+                        <li onclick="openSectionMobile('.co-tab', '#habitat', '.co-mobile-link', '.habitat-mobile', 'Habitat'), 
+                                    animateSection('.conservation-habitat-content')">
                             <a href="#conservation"><p class="co-mobile-link habitat-mobile"></p></a>
                         </li>
-                        <li onclick="openSectionMobile('.co-tab', '#education', '.co-mobile-link', '.education-mobile', 'Education')">
+                        <li onclick="openSectionMobile('.co-tab', '#education', '.co-mobile-link', '.education-mobile', 'Education'), 
+                                    animateSection('.conservation-education-content')">
                             <a href="#conservation"><p class="co-mobile-link education-mobile"></p></a>
                         </li>
-                        <li onclick="openSectionMobile('.co-tab', '#livelihood', '.co-mobile-link', '.livelihood-mobile', 'Livelihood')">
+                        <li onclick="openSectionMobile('.co-tab', '#livelihood', '.co-mobile-link', '.livelihood-mobile', 'Livelihood'), 
+                                    animateSection('.conservation-livelihood-content')">
                             <a href="#conservation"><p class="co-mobile-link livelihood-mobile"></p></a>
                         </li>
-                        <li onclick="openSectionMobile('.co-tab', '#sustainability', '.co-mobile-link', '.sustainability-mobile', 'Sustainability')">
+                        <li onclick="openSectionMobile('.co-tab', '#sustainability', '.co-mobile-link', '.sustainability-mobile', 'Sustainability'), 
+                                    animateSection('.conservation-sustainability-content')">
                             <a href="#conservation"><p class="co-mobile-link sustainability-mobile"></p></a>
                         </li>
                     </ul>
@@ -188,36 +313,107 @@
 
                 <!-- Cheetah home page -->
                 <div id="conservation-home" class="co-tab center">
-                    <div class="page-container">
-                        <p class="headings">Conservation Home</p>
+                    <div class="conservation-home-content">
                     </div>
                 </div>
 
                 <!-- Cheetah habitat page -->
                 <div id="habitat" class="co-tab">
-                    <div class="page-container">
-                        <p class="headings">Conservation Habitat</p>
+                    <div class="content-wrapper conservation-habitat-content">
+                        <h1>Habitat preservation</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Diam vulputate ut pharetra sit amet aliquam id. Fusce ut placerat orci nulla pellentesque dignissim enim. Facilisis sed 
+                            odio morbi quis commodo odio aenean sed. Turpis cursus in hac habitasse platea dictumst quisque sagittis. Posuere sollicitudin 
+                            aliquam ultrices sagittis. Laoreet suspendisse interdum consectetur libero id faucibus. Et odio pellentesque diam volutpat 
+                            commodo sed. Tortor id aliquet lectus proin. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Netus et malesuada 
+                            fames ac. Ridiculus mus mauris vitae ultricies leo integer malesuada. Lacus vel facilisis volutpat est velit egestas dui id. 
+                            Egestas congue quisque egestas diam in arcu cursus. Mi proin sed libero enim sed. Diam ut venenatis tellus in metus. 
+                            Sit amet volutpat consequat mauris nunc congue nisi vitae. Quisque egestas diam in arcu cursus euismod quis. 
+                            Eget sit amet tellus cras adipiscing enim eu turpis egestas. Ac tortor dignissim convallis aenean et. Massa enim nec dui nunc.
+                             Eu mi bibendum neque egestas congue quisque egestas diam in.
+                        </p>
+                        <div class="button-wrapper">
+                            <button class="get-involved">Get Involved</button>
+                            <button class="newsletter">Newsletter</button>
+
+                            
+                            <sl-dialog label="Dialog" class="dialog-overview">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                <sl-button slot="footer" variant="primary">Close</sl-button>
+                              </sl-dialog>
+                              
+                              <sl-button>Open Dialog</sl-button>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Cheetah education page -->
                 <div id="education" class="co-tab">
-                    <div class="page-container">
-                        <p class="headings">Conservation Education</p>
+                    <div class="content-wrapper conservation-education-content">
+                        <h1>Education</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Diam vulputate ut pharetra sit amet aliquam id. Fusce ut placerat orci nulla pellentesque dignissim enim. Facilisis sed 
+                            odio morbi quis commodo odio aenean sed. Turpis cursus in hac habitasse platea dictumst quisque sagittis. Posuere sollicitudin 
+                            aliquam ultrices sagittis. Laoreet suspendisse interdum consectetur libero id faucibus. Et odio pellentesque diam volutpat 
+                            commodo sed. Tortor id aliquet lectus proin. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Netus et malesuada 
+                            fames ac. Ridiculus mus mauris vitae ultricies leo integer malesuada. Lacus vel facilisis volutpat est velit egestas dui id. 
+                            Egestas congue quisque egestas diam in arcu cursus. Mi proin sed libero enim sed. Diam ut venenatis tellus in metus. 
+                            Sit amet volutpat consequat mauris nunc congue nisi vitae. Quisque egestas diam in arcu cursus euismod quis. 
+                            Eget sit amet tellus cras adipiscing enim eu turpis egestas. Ac tortor dignissim convallis aenean et. Massa enim nec dui nunc.
+                             Eu mi bibendum neque egestas congue quisque egestas diam in.
+                        </p>
+                        <div class="button-wrapper">
+                            <button class="get-involved">Get Involved</button>
+                            <button class="newsletter">Newsletter</button>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Cheetah liveilhood page -->
                 <div id="livelihood" class="co-tab">
-                    <div class="page-container">
-                        <p class="headings">Conservation Livelihood</p>
+                    <div class="content-wrapper conservation-livelihood-content">
+                        <h1>Livelihood Program</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Diam vulputate ut pharetra sit amet aliquam id. Fusce ut placerat orci nulla pellentesque dignissim enim. Facilisis sed 
+                            odio morbi quis commodo odio aenean sed. Turpis cursus in hac habitasse platea dictumst quisque sagittis. Posuere sollicitudin 
+                            aliquam ultrices sagittis. Laoreet suspendisse interdum consectetur libero id faucibus. Et odio pellentesque diam volutpat 
+                            commodo sed. Tortor id aliquet lectus proin. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Netus et malesuada 
+                            fames ac. Ridiculus mus mauris vitae ultricies leo integer malesuada. Lacus vel facilisis volutpat est velit egestas dui id. 
+                            Egestas congue quisque egestas diam in arcu cursus. Mi proin sed libero enim sed. Diam ut venenatis tellus in metus. 
+                            Sit amet volutpat consequat mauris nunc congue nisi vitae. Quisque egestas diam in arcu cursus euismod quis. 
+                            Eget sit amet tellus cras adipiscing enim eu turpis egestas. Ac tortor dignissim convallis aenean et. Massa enim nec dui nunc.
+                             Eu mi bibendum neque egestas congue quisque egestas diam in.
+                        </p>
+                        <div class="button-wrapper">
+                            <button class="get-involved">Get Involved</button>
+                            <button class="newsletter">Newsletter</button>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Cheetah sustainability page -->
                 <div id="sustainability" class="co-tab">
-                    <div class="page-container">
-                        <p class="headings">Conservation Sustainability</p>
+                    <div class="content-wrapper conservation-sustainability-content">
+                        <h1>Sustainability</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Diam vulputate ut pharetra sit amet aliquam id. Fusce ut placerat orci nulla pellentesque dignissim enim. Facilisis sed 
+                            odio morbi quis commodo odio aenean sed. Turpis cursus in hac habitasse platea dictumst quisque sagittis. Posuere sollicitudin 
+                            aliquam ultrices sagittis. Laoreet suspendisse interdum consectetur libero id faucibus. Et odio pellentesque diam volutpat 
+                            commodo sed. Tortor id aliquet lectus proin. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Netus et malesuada 
+                            fames ac. Ridiculus mus mauris vitae ultricies leo integer malesuada. Lacus vel facilisis volutpat est velit egestas dui id. 
+                            Egestas congue quisque egestas diam in arcu cursus. Mi proin sed libero enim sed. Diam ut venenatis tellus in metus. 
+                            Sit amet volutpat consequat mauris nunc congue nisi vitae. Quisque egestas diam in arcu cursus euismod quis. 
+                            Eget sit amet tellus cras adipiscing enim eu turpis egestas. Ac tortor dignissim convallis aenean et. Massa enim nec dui nunc.
+                             Eu mi bibendum neque egestas congue quisque egestas diam in.
+                        </p>
+                        <div class="button-wrapper">
+                            <button class="get-involved">Get Involved</button>
+                            <button class="newsletter">Newsletter</button>
+                        </div>
                     </div>
                 </div>
 
@@ -225,15 +421,39 @@
 
             <!-- About section -->
             <section id="about">
-                <div class="page-container">
-                    <p class="headings">About</p>
+                <div class="content-wrapper about-content">
+                    <h1>About IFAW</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Diam vulputate ut pharetra sit amet aliquam id. Fusce ut placerat orci nulla pellentesque dignissim enim. Facilisis sed 
+                        odio morbi quis commodo odio aenean sed. Turpis cursus in hac habitasse platea dictumst quisque sagittis. Posuere sollicitudin 
+                        aliquam ultrices sagittis. Laoreet suspendisse interdum consectetur libero id faucibus. Et odio pellentesque diam volutpat 
+                        commodo sed. Tortor id aliquet lectus proin. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Netus et malesuada 
+                        fames ac. Ridiculus mus mauris vitae ultricies leo integer malesuada. Lacus vel facilisis volutpat est velit egestas dui id. 
+                        Egestas congue quisque egestas diam in arcu cursus. Mi proin sed libero enim sed. Diam ut venenatis tellus in metus. 
+                        Sit amet volutpat consequat mauris nunc congue nisi vitae. Quisque egestas diam in arcu cursus euismod quis. 
+                        Eget sit amet tellus cras adipiscing enim eu turpis egestas. Ac tortor dignissim convallis aenean et. Massa enim nec dui nunc.
+                         Eu mi bibendum neque egestas congue quisque egestas diam in.
+                    </p>
                 </div>
             </section>
 
             <!-- Contact section -->
             <section id="contact">
-                <div class="page-container">
-                    <p class="headings">Contact</p>
+                <div class="page-container contact-content">
+                    <p>If you have any enquireies or would like to join in on the conservation efforts please contact us</p>
+
+                <div class="contact-form">
+                    <input type="text" id="fname" placeholder="First Name"><br><br>
+                    <input type="text" id="lname" placeholder="First Name"><br><br>
+                    <input type="text" id="email" placeholder="Email"><br><br>
+                    <input type="text" id="message" placeholder="Message"><br><br>
+                </div>
+
+                <div class="button-wrapper">
+                    <button class="get-involved">Get Involved</button>
+                    <button class="newsletter">Newsletter</button>
+                </div>
                 </div>
             </section>
 
@@ -242,7 +462,9 @@
         </div>
         
         <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0/dist/shoelace.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
     <script src="main.js"></script> 
 </body>
 </html>
