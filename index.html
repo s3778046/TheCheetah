@@ -33,11 +33,11 @@
             <div id="dropdown-menu">
                 <img id="close" src="images/close.png" alt="" onclick="closeMenu()">
                 <ul>
-                    <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#home">home</a></li>
-                    <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#cheetah">the cheetah</a></li>
-                    <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#conservation">conservation</a></li>
-                    <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#about">about IWAF</a></li>
-                    <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#contact">contact</a></li>
+                    <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#home">Home</a></li>
+                    <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#cheetah">The Cheetah</a></li>
+                    <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#conservation">Conservation</a></li>
+                    <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#about">About IWAF</a></li>
+                    <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </header>
@@ -57,70 +57,14 @@
             
             <!-- ************************************************* Cheetah section ********************************************************* -->
             <section id="cheetah">
-
                 
-
-                 <!-- Vertical navigation menu fo cheetah section -->
-                <div id="vertical-menu">
-                    <ul>
-                        <li onclick="openSection('.ch-tab', '#cheetah-home', '.ch-link', '.cheetah-home'), 
-                                    animateSection('.cheetah-home-content')">
-                            <a href="#cheetah"><p class="ch-link cheetah-home menu-active" href="#cheetah">Cheetah</p></a>
-                        </li>
-                        <li onclick="openSection('.ch-tab', '#characteristics', '.ch-link', '.characteristics'), 
-                                    animateSection('.cheetah-characteristics-content')">
-                            <a href="#cheetah"><p class="ch-link characteristics" href="#cheetah">Characteristics</p></a>    
-                        </li>
-                        <li onclick="openSection('.ch-tab', '#regions', '.ch-link', '.regions'),
-                                    animateSection('.cheetah-regions-content')">
-                            <a href="#cheetah"><p class="ch-link regions" href="#cheetah">Regions</p></a>
-                        </li>
-                        <li onclick="openSection('.ch-tab', '#population', '.ch-link', '.population'),
-                                    animateSection('.cheetah-population-content')">
-                            <a href="#cheetah"><p class="ch-link population" href="#cheetah">Population</p></a>
-                        </li>
-                        <li onclick="openSection('.ch-tab', '#gallery', '.ch-link', '.gallery'),
-                                    animateSection('.cheetah-gallery-content')">
-                            <a href="#cheetah"><p class="ch-link gallery" href="#cheetah">Gallery</p></a>
-                        </li>
-                    </ul>
-                    <h4 class="menu-label">Cheetah</h4>
-                </div>
-
-                 <!-- Vertical navigation menu for conservation section -->
-                 <div id="vertical-mobile-menu">
-                    <p class="mobile-menu-label ch-label">Cheetah Home</p>
-                    <ul>
-                        <li onclick="openSectionMobile('.ch-tab', '#cheetah-home', '.ch-mobile-link', '.cheetah-home-mobile', 'Cheetah Home'), 
-                                    animateSection('.cheetah-home-content')">
-                            <a href="#cheetah"><p class="ch-mobile-link cheetah-home-mobile mobile-menu-active"></p></a>
-                        </li>
-                        <li onclick="openSectionMobile('.ch-tab', '#characteristics', '.ch-mobile-link', '.characteristics-mobile', 'Characteristics'),
-                                    animateSection('.cheetah-characteristics-content')">
-                            <a href="#cheetah"><p class="ch-mobile-link characteristics-mobile"></p></a>
-                        </li>
-                        <li onclick="openSectionMobile('.ch-tab', '#regions', '.ch-mobile-link', '.regions-mobile', 'Regions'),
-                                    animateSection('.cheetah-regions-content')">
-                            <a href="#cheetah"><p class="ch-mobile-link regions-mobile"></p></a>
-                        </li>
-                        <li onclick="openSectionMobile('.ch-tab', '#population', '.ch-mobile-link', '.population-mobile', 'Population'),
-                                    animateSection('.cheetah-population-content')">
-                            <a href="#cheetah"><p class="ch-mobile-link population-mobile"></p></a>
-                        </li>
-                        <li onclick="openSectionMobile('.ch-tab', '#gallery', '.ch-mobile-link', '.gallery-mobile', 'Gallery'),
-                                    animateSection('.cheetah-gallery-content')">
-                            <a href="#cheetah"><p class="ch-mobile-link gallery-mobile"></p></a>
-                        </li>
-                    </ul>
-                </div>
-
                 <!-- Cheetah Home page -->
-                <div id="cheetah-home" class="ch-tab center">
+                <div id="cheetah-home" class="center">
                     <div class="cheetah-home-content"></div>
                 </div>
 
                 <!-- Cheetah Characteristics page -->
-                <div id="characteristics" class="ch-tab">
+                <div id="characteristics">
                     <div class="cheetah-characteristics-content">
 
                         <div class="characteristics-img"></div>
@@ -149,50 +93,46 @@
                 </div>
 
                 <!--  Cheetah Regions page  -->
-                <div id="regions" class="ch-tab">
+                <div id="regions">
                     <div class="cheetah-regions-content">
                         <div class="region-tooltip-content default">
                             <h1>Hotspots</h1>
-                            <p>Click on a hotspot to reveal data on the selected country.</p>
+                            <p>Click on a hotspot to reveal data on the selected region.</p>
                         </div>
     
-                        <div class="region-tooltip-content algeria">
-                            <h1>Algeria</h1>
-                            <p>There are 191 cheetahs in Algeria and Mali</p>
+                        <div class="region-tooltip-content western">
+                            <h1>Western, central & northern Africa</h1>
+                            <p>There is less than 500 surviving cheetahs in Western, central & northern Africa</p>
                         </div>
     
-                        <div class="region-tooltip-content ethiopia">
-                            <h1>Ethiopia</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla cum laborum.</p>
+                        <div class="region-tooltip-content southern">
+                            <h1>Southern Africa</h1>
+                            <p>There is less than 4,000 surviving cheetahs in southern Africa</p>
                         </div>
     
-                        <div class="region-tooltip-content kenya">
-                            <h1>Kenya</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla cum laborum.</p>
+                        <div class="region-tooltip-content eastern">
+                            <h1>Eastern Africa</h1>
+                            <p>There is less than 2,000 surviving cheetahs in southern Africa</p>
+                        </div>
+
+                        <div class="region-tooltip-content iran">
+                            <h1>Iran</h1>
+                            <p>There is less than 70 surviving cheetahs in Iran</p>
                         </div>
     
-                        <div class="region-tooltip-content botswana">
-                            <h1>Botswana</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla cum laborum.</p>
-                        </div>
-    
-                        <div class="region-tooltip-content sudan">
-                            <h1>Sudan</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla cum laborum.</p>
-                        </div>
+                        
     
                         <div class="region-image-wrapper">
-                            <div class="spot"><sl-tooltip content="Algeria"><sl-button onclick="displayHotSpotData('.algeria')"></sl-button></sl-tooltip></div> 
-                            <div class="spot"><sl-tooltip content="Ethiopia"><sl-button onclick="displayHotSpotData('.ethiopia')"></sl-button></sl-tooltip></div>
-                            <div class="spot"><sl-tooltip content="Kenya"><sl-button onclick="displayHotSpotData('.kenya')"></sl-button></sl-tooltip></div>
-                            <div class="spot"><sl-tooltip content="Botswana"><sl-button onclick="displayHotSpotData('.botswana')"></sl-button></sl-tooltip></div>
-                            <div class="spot"><sl-tooltip content="Sudan"><sl-button onclick="displayHotSpotData('.sudan')"></sl-button></sl-tooltip></div>
+                            <div class="spot"><sl-tooltip content="Western Africa"><sl-button onclick="displayHotSpotData('.western')"></sl-button></sl-tooltip></div> 
+                            <div class="spot"><sl-tooltip content="Southern Africa"><sl-button onclick="displayHotSpotData('.southern')"></sl-button></sl-tooltip></div>
+                            <div class="spot"><sl-tooltip content="Eastern Africa"><sl-button onclick="displayHotSpotData('.eastern')"></sl-button></sl-tooltip></div>
+                            <div class="spot"><sl-tooltip content="Iran"><sl-button onclick="displayHotSpotData('.iran')"></sl-button></sl-tooltip></div> 
                         </div>
                     </div>
                 </div>
 
                 <!--  Cheetah population page  -->
-                <div id="population" class="ch-tab">
+                <div id="population">
                     <div class="cheetah-population-content">
                         <h1 class="headings">Cheetah population</h1>
 
@@ -212,7 +152,7 @@
                 </div>
 
                 <!--  Cheetah Gallery page  -->
-                <div id="gallery" class="ch-tab">
+                <div id="gallery">
                     <div class="cheetah-gallery-content center">
                         
 
@@ -308,18 +248,7 @@
                     </p>
                
             </div> 
-            </section> 
-
-
-
-
-
-
-
-
-
-
-
+            </section>
 
             <!-- About section -->
             <section id="about">
@@ -343,7 +272,7 @@
                 </sl-dialog>
 
                 <div class="contact-content">
-                    <p>If you have any enquireies or would like to join in on the conservation efforts please contact us</p>
+                    <p>If you would like to get involved with conservation please contact us</p>
 
                     <div class="contact-form">
                         <input type="text" id="fname" placeholder="First Name"><br><br>
@@ -356,7 +285,10 @@
             </section>
 
             <!-- Footer section section -->
-            <footer>&copy 2022 Mark McLachlan</footer>
+            <footer>
+                <img src="images/logo.png" href="home.html" alt="" style="width: 70px;">
+                <p>&copy 2022 Mark McLachlan</p>
+            </footer>
         </div>
         
         <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0/dist/shoelace.js"></script>
@@ -366,3 +298,5 @@
     <script src="main.js"></script> 
 </body>
 </html>
+
+

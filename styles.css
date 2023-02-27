@@ -36,13 +36,12 @@ body {
 header {
     padding: 25px 25px; 
     position: fixed; 
-    width: 100%;
+    width: 100vw;
     height: 90px;
     top: 0;
     left: 0;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.9);
-    box-shadow: 2px 2px 5px var(--champagne);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 header img, #menu img {
@@ -131,99 +130,6 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
 }
 
 
-/* =================== Vertical menu layout for cheetah  section ===================== */
-#vertical-menu {
-    display: flex;
-    align-items: center;
-    flex-basis: 20vw;
-    position: absolute;
-    right: 5vw;
-    z-index: 5;
-}
-
-#vertical-menu ul {
-    border-right: 2px solid var(--champagne);
-    padding: 0 20px;
-}
-
-#vertical-menu ul li {
-    padding: 10px 5px;
-    list-style: none;
-    text-decoration: none;
-}
-
-#vertical-menu ul li a{
-    display: inline;
-    text-decoration: none;
-    color: white;
-}
-
-.menu-label {
-    color: var(--champagne);
-    writing-mode: vertical-rl;
-    padding: 10px;
-}
-
-#vertical-menu > ul > li:hover {
-    scale: 1.2;
-    opacity: .8;
-    cursor: pointer;
-}
-
-@media screen and (max-width: 1024px) {
-    #vertical-menu {
-        display: none;
-    }
-}
-
-/* =================== Vertical  mobile menu layout for cheetah section ===================== */
-
-#vertical-mobile-menu {
-    display: none;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    bottom: 50px;
-    left: 0;
-    width: 100vw;
-    z-index: 5;
-}
-
-#vertical-mobile-menu ul{
-   display: flex;
-}
-
-#vertical-mobile-menu ul li{
-    list-style: none;
-    padding: 8px;
-}
-
-#vertical-mobile-menu > ul > li:hover {
-    scale: 1.2;
-    opacity: .8;
-    cursor: pointer;
-}
-
-.mobile-menu-label {
-    color: var(--champagne);
-    font-size: .9em;
-}
-
-#vertical-mobile-menu .co-mobile-link,
-#vertical-mobile-menu .ch-mobile-link {
-    height: 12px;
-    width: 12px;
-    border-radius: 6px;
-    border: white solid 1px;
-}
-
-@media screen and (max-width: 1024px) {
-    #vertical-mobile-menu {
-        display: flex;
-    }
-}
-
 /* ========================================================================================== */
 /* ================================ Home page section layout ======================================== */
 /* ========================================================================================== */
@@ -233,13 +139,14 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
     justify-content: center;
     align-items: center;
     color: white;
+    box-shadow: 0 4px 4px -4px var(--champagne);
 }
 
 .home-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('images/c11.png');
+    background-image: url('images/home-img.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -248,11 +155,12 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
 }
 
 .home-item {
-    height: 100%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-direction: column;
+    position: absolute;
+    bottom: 160px;
+    padding: 15px 100px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50px;
 }
 
 #home h1 {
@@ -260,7 +168,6 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
     font-size: 4rem;
     letter-spacing: 9px;
     font-family: 'Cinzel', serif;
-    margin-top: 140px;
     border-radius: 50px;
     text-shadow: 2px 2px 2px  rgb(0, 0, 0);
 }
@@ -270,7 +177,7 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
     font-size: 1.8rem;
     letter-spacing: 3px;
     font-style: italic;
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: 'Cinzel', serif;
     font-weight: 100;
 }
@@ -314,64 +221,20 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
 /* ================================================================================================= */
 /* ================================ Cheetah section layout ========================================= */
 /* ================================================================================================= */
-
-#cheetah {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+#page-wrapper {
+   overflow: hidden;
 }
-
-#characteristics, #regions, #population, #gallery {
-    display: none;
-    width: 100vw;
-}
-
-/* ================================== Cheetah home styling =============================================================== */
-#cheetah-home {
-    width: 80vw;
-    display: flex;
-    justify-content: left;
-}
-
-.cheetah-home-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('images/c1.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 50vh;
-    width: 50vw;
-}
-
-@media screen and (max-width: 1024px) {
-   
-    .cheetah-home-content {
-        height: 70vh;
-        width: 80vw;
-    }
-}
-
-@media screen and (max-width: 768px) {
-   
-    .cheetah-home-content {
-        height: 40vh;
-        width: 95vw;
-    }
-}
-
 /* ================================ Cheetah characteristics styling ========================================= */
+
+#characteristics {
+    width: 100vw;
+    height: 100vh;
+    box-shadow: 0 4px 4px -4px var(--champagne);
+}
+
 .cheetah-characteristics-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 70vh;
-    width: 75vw;
-    padding: 20px;
+    margin: auto;
+    padding-top: 150px;
 }
 
 .characteristics-img {
@@ -379,13 +242,14 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    height: 300px;
-    width: 90%;
+    height: 250px;
+    width: 100vw;
+    margin-bottom: 150px;
 }
 
-sl-tab-group {
-    width: 100%;
-    margin-top: 5vh;
+#characteristics sl-tab-group {
+    width: 90vw;
+    margin: auto;
     --indicator-color: var(--champagne);
 }
 
@@ -398,7 +262,8 @@ sl-tab-group {
 #sl-tab-7::part(base),
 #sl-tab-8::part(base) {
     color: white;
-    padding: 10px 100px;  
+    padding: 10px 100px; 
+    font-size: 1.2rem; 
 }
 
 #sl-tab-panel-1::part(base),
@@ -413,12 +278,10 @@ sl-tab-group {
     text-align: center;
     margin-top: 10px;
     padding: 60px 30px;
-    border: solid black 5px;
-    border-radius: 20px;
+    font-size: 1.8rem;
 }
 
 @media screen and (max-width: 1024px) {
-
     #sl-tab-1::part(base),
     #sl-tab-2::part(base),
     #sl-tab-3::part(base),
@@ -428,15 +291,11 @@ sl-tab-group {
     #sl-tab-7::part(base),
     #sl-tab-8::part(base) {
         padding: 10px 60px;  
+        font-size: 0.9rem; 
     }
-
-    .cheetah-characteristics-content { 
-        width: 95vw;
-     }
 }
 
 @media screen and (max-width: 768px) {
-
     #sl-tab-1::part(base),
     #sl-tab-2::part(base),
     #sl-tab-3::part(base),
@@ -448,30 +307,34 @@ sl-tab-group {
         padding: 10px 40px;  
     }
 
+    #sl-tab-panel-1::part(base),
+    #sl-tab-panel-2::part(base),
+    #sl-tab-panel-3::part(base),
+    #sl-tab-panel-4::part(base),
+    #sl-tab-panel-5::part(base),
+    #sl-tab-panel-6::part(base),
+    #sl-tab-panel-7::part(base),
+    #sl-tab-panel-8::part(base) {
+        font-size: 1rem;
+}
+
     .cheetah-characteristics-content { 
         width: 100vw;
      }
 }
 
-@media screen and (max-width: 500px) {
 
-    #sl-tab-1::part(base),
-    #sl-tab-2::part(base),
-    #sl-tab-3::part(base),
-    #sl-tab-4::part(base),
-    #sl-tab-5::part(base),
-    #sl-tab-6::part(base),
-    #sl-tab-7::part(base),
-    #sl-tab-8::part(base) {
-        padding: 10px 20px;  
-    }
-}
 
 /* ================================ Cheetah region styling ================================================== */
+#regions {
+    width: 100vw;
+    position: relative;
+    box-shadow: 0 4px 4px -4px var(--champagne);
+}
+
 .cheetah-regions-content {
     margin-top: 100px;
     height: 80vh;
-    width: 90vw;
 }
 
 .region-tooltip-content {
@@ -482,6 +345,7 @@ sl-tab-group {
     left: 15%;
     width: 200px;
     height: 200px;
+    color: white;
 }
 
 .region-tooltip-content.default {
@@ -509,40 +373,34 @@ sl-tab-group {
     border-radius: 10px;
 }
 
-/* Algeria */
+/* Western */
 .spot:nth-of-type(1){
     position: absolute;
-    top: 15%;
-    left: 41%;  
+    top: 25%;
+    left: 36%;  
 }
 
-/* Ethiopia */
+/* Southern */
 .spot:nth-of-type(2){
     position: absolute;
-    top: 38%;
-    left: 60%;
+    top: 78%;
+    left: 54%;
 }
 
-/*  Kenya */
+/*  Eastern */
 .spot:nth-of-type(3){
     position: absolute;
-    top: 48%;
-    left: 60%;
+    top: 40%;
+    left: 65%;
 }
 
-/*  Botswana */
+/*  Iran */
 .spot:nth-of-type(4){
     position: absolute;
-    top: 78%;
-    left: 53%;
+    top: 20%;
+    right: 20%;
 }
 
-/*  Sudan */
-.spot:nth-of-type(5){
-    position: absolute;
-    top: 27%;
-    left: 56% 
-}
 
 #regions sl-button:after {
     content: "";
@@ -568,6 +426,34 @@ sl-tab-group {
     .region-image-wrapper {
         height: 80%;
     }
+
+    /* Western */
+    .spot:nth-of-type(1){
+        position: absolute;
+        top: 20%;
+        left: 30%;  
+    }
+
+    /* Southern */
+    .spot:nth-of-type(2){
+        position: absolute;
+        top: 65%;
+        left: 53%;
+    }
+
+    /*  Eastern */
+    .spot:nth-of-type(3){
+        position: absolute;
+        top: 35%;
+        left: 65%;
+    }
+
+    /*  Iran */
+    .spot:nth-of-type(4){
+        position: absolute;
+        top: 20px;
+        right: 40px;
+    }
 }
 
 @media screen and (max-width: 678px) {
@@ -582,14 +468,50 @@ sl-tab-group {
     .region-image-wrapper {
         height: 70%;
     }
+
+     /* Western */
+     .spot:nth-of-type(1){
+        position: absolute;
+        top: 15%;
+        left: 20%;  
+    }
+
+    /* Southern */
+    .spot:nth-of-type(2){
+        position: absolute;
+        top: 55%;
+        left: 53%;
+    }
+
+    /*  Eastern */
+    .spot:nth-of-type(3){
+        position: absolute;
+        top: 30%;
+        left: 70%;
+    }
+
+    /*  Iran */
+    .spot:nth-of-type(4){
+        position: absolute;
+        top: 20px;
+        right: 40px;
+    }
 } 
 
 /* ================================ Cheetah population styling ================================================== */
+
+#population {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 200px;
+    box-shadow: 0 4px 4px -4px var(--champagne);
+}
 .cheetah-population-content {
     width: 78vw;
     height: 70vh;
     padding: 0 20px;
     text-align: center;
+    margin: auto;
 }
 
 .cheetah-population-content h1 {
@@ -624,7 +546,7 @@ animation: timelinePulse 1s ease infinite;
 }
 
 .bar {
-    padding: 30px 35px;
+    padding: 30px 65px;
     display: flex;
     justify-content: center;
     border-top: 4px solid var(--champagne);
@@ -663,6 +585,10 @@ animation: timelinePulse 1s ease infinite;
     .population-number {
         font-size: 2rem;
     } 
+
+    .bar {
+        padding: 30px 45px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -689,10 +615,18 @@ animation: timelinePulse 1s ease infinite;
 }
 
 /* ================================ Cheetah gallery styling ================================================== */
+
+#gallery {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    box-shadow: 0 4px 4px -4px var(--champagne);
+}
+
 .cheetah-gallery-content{
     height: 100vh;
     width: 75vw;
-    position: relative;
+    margin: auto;
 }
 
 #main-img {
@@ -812,8 +746,8 @@ animation: timelinePulse 1s ease infinite;
 /* ================================ Conservation section layout ======================================== */
 /* ===================================================================================================== */
 #conservation {
-    padding: 100px 50px
-    
+    padding: 100px 50px;
+    box-shadow: 0 4px 4px -4px var(--champagne);
 }
 
 
@@ -1058,7 +992,8 @@ animation: timelinePulse 1s ease infinite;
 
 /* ================================ Footer ============================================= */
 footer {
-    height: 4vh;
     color: white;
     text-align: center;
+    padding: 10px;
+    font-weight: bold;
 }

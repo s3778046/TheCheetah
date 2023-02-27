@@ -6,87 +6,101 @@ gsap.from("#home", {
     duration: 1,
     x: "-1500",
     scrollTrigger: "#home"
-  });
+});
 
-gsap.from("#cheetah", {
+gsap.from(".characteristics-img", {
     duration: 1,
     x: "-1500",
-    scrollTrigger: "#cheetah"
-  });
+    scrollTrigger: ".characteristics-img"
+});
 
-//   gsap.from("#conservation", {
-//     duration: 1,
-//     x: "-1500",
-//     scrollTrigger: "#conservation"
-//   });
-
-  gsap.from("#about", {
+gsap.from(".cheetah-regions-content", {
     duration: 1,
-    x: "-1000",
-    scrollTrigger:"#about"
-  });
+    x: "-1500",
+    scrollTrigger: ".cheetah-regions-content"
+});
 
-  gsap.from("#contact", {
+gsap.from("#slider", {
     duration: 1,
-    x: "-1000",
-    scrollTrigger: "#contact",
-  });
+    scale: ".4",
+    scrollTrigger: "#slider"
+});
 
-  gsap.from(".threats", {
+gsap.from(".timeline", {
+    duration: 1,
+    scale: "1.3",
+    scrollTrigger: ".timeline"
+});
+
+gsap.from(".threats", {
     duration: 1,
     x: "-1000",
     rotate: "18deg",
     scrollTrigger: ".threats",
-  });
+});
 
-  gsap.from(".education", {
+gsap.from(".education", {
     duration: 1,
     x: "1000",
     rotate: "-18deg",
     scrollTrigger: ".education",
-  });
+});
 
-  gsap.from(".livelihood", {
+gsap.from(".livelihood", {
     duration: 1,
     x: "-1000",
     rotate: "18deg",
     scrollTrigger: ".livelihood",
-  });
+});
 
-  gsap.from(".sustainability", {
+gsap.from(".sustainability", {
     duration: 1,
     x: "1000",
     rotate: "-18deg",
     scrollTrigger: ".sustainability",
-  });
+});
 
-  gsap.from(".livestock", {
+gsap.from(".livestock", {
     duration: 1,
     x: "-1000",
     rotate: "18deg",
     scrollTrigger: ".livestock",
-  });
+});
 
+gsap.from("#about", {
+    duration: 1,
+    x: "-1000",
+    scrollTrigger:"#about"
+});
 
-  // *************************************************************************************************
+gsap.from("#contact", {
+    duration: 1,
+    scale: ".4",
+    scrollTrigger: "#contact",
+});
+
+// *************************************************************************************************
 //                              GSAP 
 // *************************************************************************************************
 const tl = new TimelineLite();
-tl.from('header', 2, {
+tl.from('header', 1, {
         y: '-400',
         ease: "bounce",  
 })
 
-function animateSection(section) {
+tl.from('.home-item', 1, {
+    y: '-400',
+    ease: "bounce",  
+}, "-=0.5")
 
+
+function animateTextFromLeft(section) {
     const tl = new TimelineLite();
     tl.from(section, 1, {
-        x: "1700",
+        y: '-400',
+        ease: "bounce",  
     })
-};
-
-
-
+}
 
 // ************************************************************************************
 //                      Dropdown menu functionality 
@@ -108,70 +122,6 @@ openDropdownMenu.addEventListener('click', function() {
 function closeMenu() {
     document.querySelector("#dropdown-menu").style.display = "none";
 }
-
-// ***************************************************************************************
-//    Open sections and change active link on cheetah and conservation menu. 
-// ***************************************************************************************
-function openSection(sections, newSection, Links, newLink) {
-
-     // declare variable and store values
-     const allLinks = document.querySelectorAll(Links);
-     const changeToActive = document.querySelector(newLink);
-     const allSections = document.querySelectorAll(sections);
-     const changeToSection = document.querySelector(newSection);
-     const mobileLabel = document.querySelector('.mobile-menu-label');
- 
-     // Loop through links and remove all active classes
-     for (i = 0; i < allLinks.length; i++) {
-         allLinks[i].className = allLinks[i].className.replace(" menu-active", "");
-     }
-
-      // Loop through Sections and display all to none
-      for (i = 0; i < allSections.length; i++) {
-         allSections[i].style.display = "none";
-    }
- 
-     // Add active class to selected link
-     changeToActive.className += " menu-active";
-
-    // Change newSection to display block
-    changeToSection.style.display = "flex";
-}
-
-// ***************************************************************************************
-//    Open sections and change active link on mobile cheetah and conservation menu. 
-// ***************************************************************************************
-function openSectionMobile(sections, newSection, Links, newLink, label) {
-
-    // declare variable and store values
-    const allLinks = document.querySelectorAll(Links);
-    const changeToActive = document.querySelector(newLink);
-    const allSections = document.querySelectorAll(sections);
-    const changeToSection = document.querySelector(newSection);
-    const mobileLabelCheetah = document.querySelector('.ch-label');
-    const mobileLabelConservation = document.querySelector('.co-label');
-
-    // Loop through links and remove all active classes
-    for (i = 0; i < allLinks.length; i++) {
-        allLinks[i].className = allLinks[i].className.replace(" mobile-menu-active", "");
-    }
-
-     // Loop through Sections and display all to none
-     for (i = 0; i < allSections.length; i++) {
-        allSections[i].style.display = "none";
-   }
-
-    // Add active class to selected link
-    changeToActive.className += " mobile-menu-active";
-
-   // Change newSection to display block
-   changeToSection.style.display = "flex";
-
-   // Change mobile menu label
-   mobileLabelCheetah.innerHTML = label;
-   mobileLabelConservation.innerHTML = label;
-}
-
 
 // *************************************************************************************************
 //                                  Activate links on scrolling
@@ -207,6 +157,12 @@ function displayHotSpotData(region) {
 
     const displayRegion = document.querySelector(region);
     displayRegion.style.display = 'block';
+
+    const tl = new TimelineLite();
+    tl.from(region, 1, {
+        y: '-400',
+        ease: "bounce",  
+    })
 }
 
 // *************************************************************************************************
@@ -235,7 +191,6 @@ function togglePopulation(tipToActive, population){
             rotate: '360',
             // ease: "bounce",  
     })
-
 }
 
 // *************************************************************************************************
@@ -307,10 +262,10 @@ function closeImage() {
     img.style.display = 'none';
 }
 
-
+// Shoelace dialog box functionality.
 const dialog = document.querySelector('.dialog-overview');
-  const openButton = dialog.nextElementSibling;
-  const closeButton = dialog.querySelector('sl-button[slot="footer"]');
+const openButton = dialog.nextElementSibling;
+const closeButton = dialog.querySelector('sl-button[slot="footer"]');
 
-  openButton.addEventListener('click', () => dialog.show());
-  closeButton.addEventListener('click', () => dialog.hide());
+openButton.addEventListener('click', () => dialog.show());
+closeButton.addEventListener('click', () => dialog.hide());
