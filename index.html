@@ -51,22 +51,14 @@
                     <div class="home-item">
                         <h1>The Cheetah</h1>
                         <h4>Threats & Conservation</h4>
-                        <!-- <div class="play" onclick="openVideo()">
-                            <i class="fa fa-play"></i>
-                        </div> -->
-                    </div>
-                    <!-- <div class="video-wrapper">
-                        <p class="close-media center" onclick="closeVideo()">X</p>
-                        <iframe class="video" src="https://www.youtube.com/embed/qRjVJPdmngc"
-                        title="Cheetah Conservation I Episode 1 I The Selati Conservation Series" frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen></iframe>
-                    </div> -->
+                    </div> 
                 </div>
             </section>
             
             <!-- ************************************************* Cheetah section ********************************************************* -->
             <section id="cheetah">
+
+                
 
                  <!-- Vertical navigation menu fo cheetah section -->
                 <div id="vertical-menu">
@@ -124,37 +116,41 @@
 
                 <!-- Cheetah Home page -->
                 <div id="cheetah-home" class="ch-tab center">
-                    <div class="page-container cheetah-home-content"></div>
+                    <div class="cheetah-home-content"></div>
                 </div>
 
                 <!-- Cheetah Characteristics page -->
                 <div id="characteristics" class="ch-tab">
-                    <div class="page-container cheetah-characteristics-content">
+                    <div class="cheetah-characteristics-content">
 
                         <div class="characteristics-img"></div>
                         <sl-tab-group>
+                            <sl-tab slot="nav" panel="lifespan">Lifespan</sl-tab>
                             <sl-tab slot="nav" panel="speed">Speed</sl-tab>
                             <sl-tab slot="nav" panel="color">Color</sl-tab>
                             <sl-tab slot="nav" panel="habitat">Habitat</sl-tab>
-                            <sl-tab slot="nav" panel="height">Height</sl-tab>
+                            <sl-tab slot="nav" panel="size">Size</sl-tab>
                             <sl-tab slot="nav" panel="diet">Diet</sl-tab>
                             <sl-tab slot="nav" panel="weight">Weight</sl-tab>
+                            <sl-tab slot="nav" panel="predators">Predators</sl-tab>
                             
                             
-                          
-                            <sl-tab-panel name="speed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacinia quis vel eros donec ac odio tempor.</sl-tab-panel>
-                            <sl-tab-panel name="color">Nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Neque egestas congue quisque egestas diam in. Tincidunt eget nullam non nisi.</sl-tab-panel>
-                            <sl-tab-panel name="habitat">Turpis egestas pretium aenean pharetra magna ac. Pulvinar pellentesque habitant morbi tristique senectus et. Ultricies lacus sed turpis tincidunt id.</sl-tab-panel>
-                            <sl-tab-panel name="height">Cras sed felis eget velit. Viverra aliquet eget sit amet tellus. Egestas purus viverra accumsan in nisl nisi scelerisque eu. Tincidunt lobortis feugiat vivamus at augue.</sl-tab-panel>
-                            <sl-tab-panel name="diet">Nec dui nunc mattis enim ut tellus. Laoreet sit amet cursus sit amet. Vitae auctor eu augue ut lectus. Arcu cursus vitae congue mauris rhoncus aenean vel.</sl-tab-panel>
-                            <sl-tab-panel name="weight">Condimentum lacinia quis vel eros donec ac. Viverra suspendisse potenti nullam ac. Blandit libero volutpat sed cras. Adipiscing diam donec adipiscing tristique.</sl-tab-panel>
+                            <!-- https://factanimal.com/cheetahs/ -->
+                            <sl-tab-panel name="lifespan">Cheetahs have a lifespan of 15 - 20 years </sl-tab-panel>
+                            <sl-tab-panel name="speed">Cheetahs have a top speed of 105kph (65 mph) </sl-tab-panel>
+                            <sl-tab-panel name="color">Cheetahs color pattern is predominately tan with black spots</sl-tab-panel>
+                            <sl-tab-panel name="habitat">Cheetahs live in dry grasslands, scrub forest and savanahs</sl-tab-panel>
+                            <sl-tab-panel name="size">Cheetahs range in size from 112 -150 cm (45 - 60 inches)</sl-tab-panel>
+                            <sl-tab-panel name="diet">Gazelles, wildebeest, impalas, rabbits, birds, hares, antelopes, & warthogs</sl-tab-panel>
+                            <sl-tab-panel name="weight">46 - 159 pounds (21 - 72 kg)</sl-tab-panel>
+                            <sl-tab-panel name="predators">Lions, leopards, hyenas, eagles</sl-tab-panel>
                         </sl-tab-group>
                     </div>
                 </div>
 
                 <!--  Cheetah Regions page  -->
                 <div id="regions" class="ch-tab">
-                    <div class="page-container cheetah-regions-content">
+                    <div class="cheetah-regions-content">
                         <div class="region-tooltip-content default">
                             <h1>Hotspots</h1>
                             <p>Click on a hotspot to reveal data on the selected country.</p>
@@ -162,7 +158,7 @@
     
                         <div class="region-tooltip-content algeria">
                             <h1>Algeria</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla cum laborum.</p>
+                            <p>There are 191 cheetahs in Algeria and Mali</p>
                         </div>
     
                         <div class="region-tooltip-content ethiopia">
@@ -197,31 +193,31 @@
 
                 <!--  Cheetah population page  -->
                 <div id="population" class="ch-tab">
-                    <div class="page-container cheetah-population-content">
+                    <div class="cheetah-population-content">
                         <h1 class="headings">Cheetah population</h1>
 
                         <!-- Timeline wrapper -->
                         <div class="timeline" id="timeline">
 
                             <!-- Timeline components -->
-                            <div class="bar"><span class="tip" onclick="togglePopulation(0, '600,000')"></span>1970</div>
-                            <div class="bar"><span class="tip" onclick="togglePopulation(1, '500,000')"></span>1980</div>
-                            <div class="bar"><span class="tip" onclick="togglePopulation(2, '300,000')"></span>1990</div>
-                            <div class="bar"><span class="tip" onclick="togglePopulation(3, '200,000')"></span>2000</div>
-                            <div class="bar"><span class="tip" onclick="togglePopulation(4, '150,000')"></span>2010</div>
-                            <div class="bar"><span class="tip population-active" onclick="togglePopulation(5, '100,000')"></span>2023</div>
+                            <div class="bar"><span class="tip" onclick="togglePopulation(0, '100,000')"></span>1900</div>
+                            <div class="bar"><span class="tip" onclick="togglePopulation(1, '75,000')"></span>1920</div>
+                            <div class="bar"><span class="tip" onclick="togglePopulation(2, '50,000')"></span>1940</div>
+                            <div class="bar"><span class="tip" onclick="togglePopulation(3, '35,000')"></span>1970</div>
+                            <div class="bar"><span class="tip" onclick="togglePopulation(4, '18,000')"></span>2000</div>
+                            <div class="bar"><span class="tip population-active" onclick="togglePopulation(5, '7,000')"></span>2023</div>
                         </div>  
-                        <h1 class="population-number">100,000</h1>
+                        <h1 class="population-number">7,000</h1>
                     </div>
                 </div>
 
                 <!--  Cheetah Gallery page  -->
                 <div id="gallery" class="ch-tab">
-                    <div class="page-container cheetah-gallery-content center">
+                    <div class="cheetah-gallery-content center">
                         
 
                         <div class="gallery-image">
-                            <p class="close-media center" onclick="closeImage()">X</p>
+                            <p class="close-image center" onclick="closeImage()">X</p>
                             <img id="main-img" src="" alt="Main Image">
                         </div>
                 
@@ -239,7 +235,7 @@
                                 <img class="slider-img img4" src="./images/slider_images/s4.jpg" alt="Cheetah 4">
                                 <img class="slider-img img5" src="./images/slider_images/s5.jpg" alt="Cheetah 5">
                                 <img class="slider-img img6" src="./images/slider_images/s6.jpg" alt="Cheetah 6">
-                                <img class="slider-img img7" src="./images/slider_images/s9.jpg" alt="Cheetah 7">
+                                <img class="slider-img img7" src="./images/slider_images/s7.jpg" alt="Cheetah 7">
                                 <img class="slider-img img8" src="./images/slider_images/s8.jpg" alt="Cheetah 8">
                                 <img class="slider-img img9" src="./images/slider_images/s9.jpg" alt="Cheetah 9">
                                 
@@ -255,205 +251,107 @@
             
             <!-- ************************************************Conservation section ****************************************************** -->
             <section id="conservation">
+                
+                
 
-                <!-- Vertical navigation menu for conservation section -->
-                 <div id="vertical-menu">
-                    <ul>
-                        <li onclick="openSection('.co-tab', '#conservation-home', '.co-link', '.conservation-home'), 
-                                    animateSection('.conservation-home-content')">
-                            <a href="#conservation"><p class="co-link conservation-home menu-active">Conservation</p></a>
-                        </li>
-                        <li onclick="openSection('.co-tab', '#habitat', '.co-link', '.habitat'), 
-                                    animateSection('.conservation-habitat-content')">
-                            <a href="#conservation"><p class="co-link habitat">Habitat</p></a>
-                        </li>
-                        <li onclick="openSection('.co-tab', '#education', '.co-link', '.education'), 
-                                    animateSection('.conservation-education-content')">
-                            <a href="#conservation"><p class="co-link education">Education</p></a>
-                        </li>
-                        <li onclick="openSection('.co-tab', '#livelihood', '.co-link', '.livelihood'), 
-                                    animateSection('.conservation-livelihood-content')">
-                            <a href="#conservation"><p class="co-link livelihood">livelihood</p></a>
-
-                        </li>
-                        <li onclick="openSection('.co-tab', '#sustainability', '.co-link', '.sustainability'), 
-                                    animateSection('.conservation-sustainability-content')">
-                            <a href="#conservation"><p class="co-link sustainability">Sustainability</p></a>
-                        </li>
-                    </ul>
-                    <p class="menu-label">Conservation</p>
-                </div>
-
-                 <!-- Vertical navigation menu for conservation section -->
-                 <div id="vertical-mobile-menu">
-                    <p class="mobile-menu-label co-label">Conservation Home</p>
-                    <ul>
-                        <li onclick="openSectionMobile('.co-tab', '#conservation-home', '.co-mobile-link', '.conservation-home-mobile', 'Conservation Home'), 
-                                    animateSection('.conservation-home-content')">
-                            <a href="#conservation"><p class="co-mobile-link conservation-home-mobile mobile-menu-active"></p></a>
-                        </li>
-                        <li onclick="openSectionMobile('.co-tab', '#habitat', '.co-mobile-link', '.habitat-mobile', 'Habitat'), 
-                                    animateSection('.conservation-habitat-content')">
-                            <a href="#conservation"><p class="co-mobile-link habitat-mobile"></p></a>
-                        </li>
-                        <li onclick="openSectionMobile('.co-tab', '#education', '.co-mobile-link', '.education-mobile', 'Education'), 
-                                    animateSection('.conservation-education-content')">
-                            <a href="#conservation"><p class="co-mobile-link education-mobile"></p></a>
-                        </li>
-                        <li onclick="openSectionMobile('.co-tab', '#livelihood', '.co-mobile-link', '.livelihood-mobile', 'Livelihood'), 
-                                    animateSection('.conservation-livelihood-content')">
-                            <a href="#conservation"><p class="co-mobile-link livelihood-mobile"></p></a>
-                        </li>
-                        <li onclick="openSectionMobile('.co-tab', '#sustainability', '.co-mobile-link', '.sustainability-mobile', 'Sustainability'), 
-                                    animateSection('.conservation-sustainability-content')">
-                            <a href="#conservation"><p class="co-mobile-link sustainability-mobile"></p></a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Cheetah home page -->
-                <div id="conservation-home" class="co-tab center">
-                    <div class="conservation-home-content">
-                    </div>
-                </div>
-
-                <!-- Cheetah habitat page -->
-                <div id="habitat" class="co-tab">
-                    <div class="content-wrapper conservation-habitat-content">
-                        <h1>Habitat preservation</h1>
+                    <!-- Cheetah Threats page -->
+                    <div class="conservation-content threats">
+                        <h1>Threats</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Diam vulputate ut pharetra sit amet aliquam id. Fusce ut placerat orci nulla pellentesque dignissim enim. Facilisis sed 
-                            odio morbi quis commodo odio aenean sed. Turpis cursus in hac habitasse platea dictumst quisque sagittis. Posuere sollicitudin 
-                            aliquam ultrices sagittis. Laoreet suspendisse interdum consectetur libero id faucibus. Et odio pellentesque diam volutpat 
-                            commodo sed. Tortor id aliquet lectus proin. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Netus et malesuada 
-                            fames ac. Ridiculus mus mauris vitae ultricies leo integer malesuada. Lacus vel facilisis volutpat est velit egestas dui id. 
-                            Egestas congue quisque egestas diam in arcu cursus. Mi proin sed libero enim sed. Diam ut venenatis tellus in metus. 
-                            Sit amet volutpat consequat mauris nunc congue nisi vitae. Quisque egestas diam in arcu cursus euismod quis. 
-                            Eget sit amet tellus cras adipiscing enim eu turpis egestas. Ac tortor dignissim convallis aenean et. Massa enim nec dui nunc.
-                             Eu mi bibendum neque egestas congue quisque egestas diam in.
+                            Some of the most significant threats to the cheatah include; Hunting and poaching, farmers protecting livestock, climate change, the destruction of habitat, low rate of reproductive 
+                            success compared to other mammals.
                         </p>
-                        <div class="button-wrapper">
-                            <button class="get-involved">Get Involved</button>
-                            <button class="newsletter">Newsletter</button>
-
-                            
-                            <sl-dialog label="Dialog" class="dialog-overview">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                <sl-button slot="footer" variant="primary">Close</sl-button>
-                              </sl-dialog>
-                              
-                              <sl-button>Open Dialog</sl-button>
-                        </div>
                     </div>
-                </div>
+                
 
-                <!-- Cheetah education page -->
-                <div id="education" class="co-tab">
-                    <div class="content-wrapper conservation-education-content">
+                    <!-- Cheetah education page -->
+                    <div class="conservation-content education">
                         <h1>Education</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Diam vulputate ut pharetra sit amet aliquam id. Fusce ut placerat orci nulla pellentesque dignissim enim. Facilisis sed 
-                            odio morbi quis commodo odio aenean sed. Turpis cursus in hac habitasse platea dictumst quisque sagittis. Posuere sollicitudin 
-                            aliquam ultrices sagittis. Laoreet suspendisse interdum consectetur libero id faucibus. Et odio pellentesque diam volutpat 
-                            commodo sed. Tortor id aliquet lectus proin. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Netus et malesuada 
-                            fames ac. Ridiculus mus mauris vitae ultricies leo integer malesuada. Lacus vel facilisis volutpat est velit egestas dui id. 
-                            Egestas congue quisque egestas diam in arcu cursus. Mi proin sed libero enim sed. Diam ut venenatis tellus in metus. 
-                            Sit amet volutpat consequat mauris nunc congue nisi vitae. Quisque egestas diam in arcu cursus euismod quis. 
-                            Eget sit amet tellus cras adipiscing enim eu turpis egestas. Ac tortor dignissim convallis aenean et. Massa enim nec dui nunc.
-                             Eu mi bibendum neque egestas congue quisque egestas diam in.
+                           Education is vital to the survival of the cheetah, research shows that puplic education will help ensure the survival
+                           of the cheetah into the future.
                         </p>
-                        <div class="button-wrapper">
-                            <button class="get-involved">Get Involved</button>
-                            <button class="newsletter">Newsletter</button>
-                        </div>
                     </div>
-                </div>
+                
 
-                <!-- Cheetah liveilhood page -->
-                <div id="livelihood" class="co-tab">
-                    <div class="content-wrapper conservation-livelihood-content">
+                    <!-- Cheetah liveilhood page -->
+                    <div class="conservation-content livelihood">
                         <h1>Livelihood Program</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Diam vulputate ut pharetra sit amet aliquam id. Fusce ut placerat orci nulla pellentesque dignissim enim. Facilisis sed 
-                            odio morbi quis commodo odio aenean sed. Turpis cursus in hac habitasse platea dictumst quisque sagittis. Posuere sollicitudin 
-                            aliquam ultrices sagittis. Laoreet suspendisse interdum consectetur libero id faucibus. Et odio pellentesque diam volutpat 
-                            commodo sed. Tortor id aliquet lectus proin. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Netus et malesuada 
-                            fames ac. Ridiculus mus mauris vitae ultricies leo integer malesuada. Lacus vel facilisis volutpat est velit egestas dui id. 
-                            Egestas congue quisque egestas diam in arcu cursus. Mi proin sed libero enim sed. Diam ut venenatis tellus in metus. 
-                            Sit amet volutpat consequat mauris nunc congue nisi vitae. Quisque egestas diam in arcu cursus euismod quis. 
-                            Eget sit amet tellus cras adipiscing enim eu turpis egestas. Ac tortor dignissim convallis aenean et. Massa enim nec dui nunc.
-                             Eu mi bibendum neque egestas congue quisque egestas diam in.
+                            A major key to ensuring the survival of the cheetah into the future is to secure the livelihood of people who share 
+                            habitat with the species. People who develop livelihood skills without the need to exploit the cheetah for income will 
+                            have a major impact on the survival of the species.
                         </p>
-                        <div class="button-wrapper">
-                            <button class="get-involved">Get Involved</button>
-                            <button class="newsletter">Newsletter</button>
-                        </div>
                     </div>
-                </div>
+                
+
+                    <!-- Cheetah sustainability page -->
+                    <div class="conservation-content sustainability">
+                        <h1>Cheetah sustainability program</h1>
+                        <p>
+                        
+                            The cheetah sustainability program is a breeding program to support conservation of the cheetah and ensure the 
+                            survival of the species. Litters of cheetahs are being breed in large breeding centers to help the repopulation of the species.
+                            
+                        </p>
+                   
+                </div> 
 
                 <!-- Cheetah sustainability page -->
-                <div id="sustainability" class="co-tab">
-                    <div class="content-wrapper conservation-sustainability-content">
-                        <h1>Sustainability</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Diam vulputate ut pharetra sit amet aliquam id. Fusce ut placerat orci nulla pellentesque dignissim enim. Facilisis sed 
-                            odio morbi quis commodo odio aenean sed. Turpis cursus in hac habitasse platea dictumst quisque sagittis. Posuere sollicitudin 
-                            aliquam ultrices sagittis. Laoreet suspendisse interdum consectetur libero id faucibus. Et odio pellentesque diam volutpat 
-                            commodo sed. Tortor id aliquet lectus proin. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Netus et malesuada 
-                            fames ac. Ridiculus mus mauris vitae ultricies leo integer malesuada. Lacus vel facilisis volutpat est velit egestas dui id. 
-                            Egestas congue quisque egestas diam in arcu cursus. Mi proin sed libero enim sed. Diam ut venenatis tellus in metus. 
-                            Sit amet volutpat consequat mauris nunc congue nisi vitae. Quisque egestas diam in arcu cursus euismod quis. 
-                            Eget sit amet tellus cras adipiscing enim eu turpis egestas. Ac tortor dignissim convallis aenean et. Massa enim nec dui nunc.
-                             Eu mi bibendum neque egestas congue quisque egestas diam in.
-                        </p>
-                        <div class="button-wrapper">
-                            <button class="get-involved">Get Involved</button>
-                            <button class="newsletter">Newsletter</button>
-                        </div>
-                    </div>
-                </div>
-
+                <!-- https://cheetah.org/canada/about-us/ -->
+                <div class="conservation-content livestock">
+                    <h1>Livestock guarding dogs</h1>
+                    <p>
+                        The livestock guarding dog program is a non lethal predator control method that helps farmers and wildlife co-exist peacefully. 
+                        The guard dogs reduce the cheetahs ability to get close to farm animals reducing the need for farmers to kill cheetahs to protect 
+                        there livestock.
+                    </p>
+               
+            </div> 
             </section> 
+
+
+
+
+
+
+
+
+
+
+
 
             <!-- About section -->
             <section id="about">
-                <div class="content-wrapper about-content">
+                <div class="about-content">
                     <h1>About IFAW</h1>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Diam vulputate ut pharetra sit amet aliquam id. Fusce ut placerat orci nulla pellentesque dignissim enim. Facilisis sed 
-                        odio morbi quis commodo odio aenean sed. Turpis cursus in hac habitasse platea dictumst quisque sagittis. Posuere sollicitudin 
-                        aliquam ultrices sagittis. Laoreet suspendisse interdum consectetur libero id faucibus. Et odio pellentesque diam volutpat 
-                        commodo sed. Tortor id aliquet lectus proin. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Netus et malesuada 
-                        fames ac. Ridiculus mus mauris vitae ultricies leo integer malesuada. Lacus vel facilisis volutpat est velit egestas dui id. 
-                        Egestas congue quisque egestas diam in arcu cursus. Mi proin sed libero enim sed. Diam ut venenatis tellus in metus. 
-                        Sit amet volutpat consequat mauris nunc congue nisi vitae. Quisque egestas diam in arcu cursus euismod quis. 
-                        Eget sit amet tellus cras adipiscing enim eu turpis egestas. Ac tortor dignissim convallis aenean et. Massa enim nec dui nunc.
-                         Eu mi bibendum neque egestas congue quisque egestas diam in.
+                        The International fund for animal welfare (IFAW), is a global not for profit organisation with the sole focus of helping 
+                        animals and people to co-exist peacefully together. Through partnerships with governments, communities, and 
+                        businesses, IFAW are focused on animal conservation and welfare to help all species of animal’s flourish into the future
                     </p>
                 </div>
             </section>
 
             <!-- Contact section -->
             <section id="contact">
-                <div class="page-container contact-content">
+
+                <!-- Open dialog box content -->
+                <sl-dialog label="Success" class="dialog-overview">
+                    Enquiry lodged
+                    <sl-button slot="footer" variant="primary">Close</sl-button>
+                </sl-dialog>
+
+                <div class="contact-content">
                     <p>If you have any enquireies or would like to join in on the conservation efforts please contact us</p>
 
-                <div class="contact-form">
-                    <input type="text" id="fname" placeholder="First Name"><br><br>
-                    <input type="text" id="lname" placeholder="First Name"><br><br>
-                    <input type="text" id="email" placeholder="Email"><br><br>
-                    <input type="text" id="message" placeholder="Message"><br><br>
-                </div>
-
-                <div class="button-wrapper">
-                    <button class="get-involved">Get Involved</button>
-                    <button class="newsletter">Newsletter</button>
-                </div>
+                    <div class="contact-form">
+                        <input type="text" id="fname" placeholder="First Name"><br><br>
+                        <input type="text" id="lname" placeholder="First Name"><br><br>
+                        <input type="text" id="email" placeholder="Email"><br><br>
+                        <input type="text" id="message" placeholder="Message"><br><br>
+                    </div>
+                    <sl-button>Submit</sl-button>
                 </div>
             </section>
 

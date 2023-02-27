@@ -14,22 +14,57 @@ gsap.from("#cheetah", {
     scrollTrigger: "#cheetah"
   });
 
-  gsap.from("#conservation", {
-    duration: 1,
-    x: "-1500",
-    scrollTrigger: "#conservation"
-  });
+//   gsap.from("#conservation", {
+//     duration: 1,
+//     x: "-1500",
+//     scrollTrigger: "#conservation"
+//   });
 
   gsap.from("#about", {
     duration: 1,
-    x: "-1500",
+    x: "-1000",
     scrollTrigger:"#about"
   });
 
   gsap.from("#contact", {
     duration: 1,
-    x: "-1500",
+    x: "-1000",
     scrollTrigger: "#contact",
+  });
+
+  gsap.from(".threats", {
+    duration: 1,
+    x: "-1000",
+    rotate: "18deg",
+    scrollTrigger: ".threats",
+  });
+
+  gsap.from(".education", {
+    duration: 1,
+    x: "1000",
+    rotate: "-18deg",
+    scrollTrigger: ".education",
+  });
+
+  gsap.from(".livelihood", {
+    duration: 1,
+    x: "-1000",
+    rotate: "18deg",
+    scrollTrigger: ".livelihood",
+  });
+
+  gsap.from(".sustainability", {
+    duration: 1,
+    x: "1000",
+    rotate: "-18deg",
+    scrollTrigger: ".sustainability",
+  });
+
+  gsap.from(".livestock", {
+    duration: 1,
+    x: "-1000",
+    rotate: "18deg",
+    scrollTrigger: ".livestock",
   });
 
 
@@ -272,3 +307,10 @@ function closeImage() {
     img.style.display = 'none';
 }
 
+
+const dialog = document.querySelector('.dialog-overview');
+  const openButton = dialog.nextElementSibling;
+  const closeButton = dialog.querySelector('sl-button[slot="footer"]');
+
+  openButton.addEventListener('click', () => dialog.show());
+  closeButton.addEventListener('click', () => dialog.hide());

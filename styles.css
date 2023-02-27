@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap');
 
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -97,7 +96,6 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
     }
 }
 
-
 /* ========================================== Dropdown menu =============================================== */
 #dropdown-menu {
     display: none;
@@ -132,24 +130,8 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
     text-decoration: none;
 }
 
-/* ================================ Main Layout ========================================= */
-#page-wrapper {
-    height: 100vh;
-    /* overflow-y: scroll;
-    scroll-snap-type: y mandatory; */
-}
 
-section {  
-    height: 100%;
-    /* scroll-snap-align: start; */
-}
-
-section p {
-    color: white
-}
-
-
-/* =================== Vertical menu layout for cheetah and conservation sections ===================== */
+/* =================== Vertical menu layout for cheetah  section ===================== */
 #vertical-menu {
     display: flex;
     align-items: center;
@@ -194,9 +176,7 @@ section p {
     }
 }
 
-
-
-/* =================== Vertical  mobile menu layout for cheetah and conservation sections ===================== */
+/* =================== Vertical  mobile menu layout for cheetah section ===================== */
 
 #vertical-mobile-menu {
     display: none;
@@ -244,42 +224,17 @@ section p {
     }
 }
 
-/* ====================================================================================== */
-/* ================================ Main sections Layout ========================================= */
-/* ====================================================================================== */
-#home, #cheetah, #conservation, #about, #contact {
+/* ========================================================================================== */
+/* ================================ Home page section layout ======================================== */
+/* ========================================================================================== */
+#home {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    box-shadow: 0 4px 2px -2px var(--champagne);
 }
 
-#characteristics, #regions, #population, #gallery {
-    display: none;
-    width: 100vw;
-}
-
-#habitat, #education, #livelihood, #sustainability {
-    display: none;
-    width: 100vw;
-}
-
-#cheetah-home, #conservation-home {
-    width: 80vw;
-    display: flex;
-    justify-content: left;
-}
-
-footer {
-    height: 4vh;
-    color: white;
-    text-align: center;
-}
-
-/* ====================================================================================== */
-/* ================================ Home Layout ========================================= */
-/* ====================================================================================== */
 .home-content {
     display: flex;
     justify-content: center;
@@ -305,7 +260,7 @@ footer {
     font-size: 4rem;
     letter-spacing: 9px;
     font-family: 'Cinzel', serif;
-    margin-top: 100px;
+    margin-top: 140px;
     border-radius: 50px;
     text-shadow: 2px 2px 2px  rgb(0, 0, 0);
 }
@@ -320,56 +275,6 @@ footer {
     font-weight: 100;
 }
 
-.play {
-    width: 100px;
-    height: 100px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 3px solid var(--champagne);
-    border-radius: 50px;
-    position: absolute;
-    bottom: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.play i {
-    color: var(--champagne);
-    font-size: 30px;
-}
-
-.play:hover {
-    cursor: pointer;
-    opacity: .7;
-    scale: 1.2;
-}
-
-.video-wrapper {
-    display: none;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(34, 34, 34, 0.95);
-    justify-content: center;
-    align-items: center;
-    z-index: 3;
-}
-
-.video {
-    width: 854px;
-    height: 480px;
-    border: solid 10px white;
-}
-
-@media screen and (max-width: 1048px) {
-
-    .video {
-        width: 534px;
-        height: 300px;
-    }
-}
 
 @media screen and (max-width: 768px) {
     .home-content {
@@ -384,10 +289,6 @@ footer {
     .home-image {
         margin-top: 20px;
         height: 300px;
-    }
-    .video {
-        width: 356px;
-        height: 200px;
     }
 
     #home h1 {
@@ -410,10 +311,29 @@ footer {
     }
 }
 
-/* ============================================================================================== */
-/* ================================ Cheetah home layout ========================================= */
-/* ============================================================================================== */
+/* ================================================================================================= */
+/* ================================ Cheetah section layout ========================================= */
+/* ================================================================================================= */
 
+#cheetah {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#characteristics, #regions, #population, #gallery {
+    display: none;
+    width: 100vw;
+}
+
+/* ================================== Cheetah home styling =============================================================== */
+#cheetah-home {
+    width: 80vw;
+    display: flex;
+    justify-content: left;
+}
 
 .cheetah-home-content {
     display: flex;
@@ -443,10 +363,7 @@ footer {
     }
 }
 
-/* ========================================================================================================= */
-/* ================================ Cheetah characteristics layout ========================================= */
-/* ========================================================================================================= */
-
+/* ================================ Cheetah characteristics styling ========================================= */
 .cheetah-characteristics-content {
     display: flex;
     justify-content: center;
@@ -477,7 +394,9 @@ sl-tab-group {
 #sl-tab-3::part(base),
 #sl-tab-4::part(base),
 #sl-tab-5::part(base),
-#sl-tab-6::part(base) {
+#sl-tab-6::part(base),
+#sl-tab-7::part(base),
+#sl-tab-8::part(base) {
     color: white;
     padding: 10px 100px;  
 }
@@ -487,7 +406,9 @@ sl-tab-group {
 #sl-tab-panel-3::part(base),
 #sl-tab-panel-4::part(base),
 #sl-tab-panel-5::part(base),
-#sl-tab-panel-6::part(base) {
+#sl-tab-panel-6::part(base),
+#sl-tab-panel-7::part(base),
+#sl-tab-panel-8::part(base) {
     color: var(--champagne);
     text-align: center;
     margin-top: 10px;
@@ -496,7 +417,6 @@ sl-tab-group {
     border-radius: 20px;
 }
 
-
 @media screen and (max-width: 1024px) {
 
     #sl-tab-1::part(base),
@@ -504,7 +424,9 @@ sl-tab-group {
     #sl-tab-3::part(base),
     #sl-tab-4::part(base),
     #sl-tab-5::part(base),
-    #sl-tab-6::part(base) {
+    #sl-tab-6::part(base),
+    #sl-tab-7::part(base),
+    #sl-tab-8::part(base) {
         padding: 10px 60px;  
     }
 
@@ -520,7 +442,9 @@ sl-tab-group {
     #sl-tab-3::part(base),
     #sl-tab-4::part(base),
     #sl-tab-5::part(base),
-    #sl-tab-6::part(base) {
+    #sl-tab-6::part(base),
+    #sl-tab-7::part(base),
+    #sl-tab-8::part(base) {
         padding: 10px 40px;  
     }
 
@@ -536,16 +460,14 @@ sl-tab-group {
     #sl-tab-3::part(base),
     #sl-tab-4::part(base),
     #sl-tab-5::part(base),
-    #sl-tab-6::part(base) {
+    #sl-tab-6::part(base),
+    #sl-tab-7::part(base),
+    #sl-tab-8::part(base) {
         padding: 10px 20px;  
     }
 }
 
-
-/* ========================================================================================================= */
-/* ================================ Cheetah region layout ================================================== */
-/* ========================================================================================================= */
-
+/* ================================ Cheetah region styling ================================================== */
 .cheetah-regions-content {
     margin-top: 100px;
     height: 80vh;
@@ -581,7 +503,7 @@ sl-tab-group {
     margin: 0 auto;
 }
 
-sl-button::part(base) {
+#regions sl-button::part(base) {
     width: 20px;
     height: 20px;
     border-radius: 10px;
@@ -622,7 +544,7 @@ sl-button::part(base) {
     left: 56% 
 }
 
-sl-button:after {
+#regions sl-button:after {
     content: "";
     position: absolute;
     top: 0;
@@ -662,10 +584,7 @@ sl-button:after {
     }
 } 
 
-/* ============================================================================================================= */
-/* ================================ Cheetah population layout ================================================== */
-/* ============================================================================================================= */
-
+/* ================================ Cheetah population styling ================================================== */
 .cheetah-population-content {
     width: 78vw;
     height: 70vh;
@@ -751,10 +670,6 @@ animation: timelinePulse 1s ease infinite;
     .bar {
         padding: 30px 20px;
     }
-
-    /* .timeline {
-        rotate: 90deg;
-    } */
 }
 
 @media screen and (max-width: 500px) {
@@ -772,12 +687,8 @@ animation: timelinePulse 1s ease infinite;
         font-size: 1rem; 
     }
 }
-    
 
-/* ============================================================================================================= */
-/* ================================ Cheetah Gallery layout ================================================== */
-/* ============================================================================================================= */
-
+/* ================================ Cheetah gallery styling ================================================== */
 .cheetah-gallery-content{
     height: 100vh;
     width: 75vw;
@@ -858,6 +769,26 @@ animation: timelinePulse 1s ease infinite;
     z-index: 4;
 }
 
+/* Close media styling */
+.close-image {
+    font-size: 3em;
+    font-weight: bold;
+    position: absolute;
+    color: white;
+    top: 100px;
+    left: 0;
+    height: 70px;
+    transition: 0.5s ease-in-out;
+    width: 100%;
+}
+
+.close-image:hover {
+    cursor: pointer;
+    rotate: 360deg;
+    scale: 1.3;
+    opacity: .7;
+}
+
 @media screen and (max-width: 1024px) {
     .cheetah-gallery-content{
         height: 100vh;
@@ -877,72 +808,71 @@ animation: timelinePulse 1s ease infinite;
 }
 
 
-  
+/* ===================================================================================================== */
+/* ================================ Conservation section layout ======================================== */
+/* ===================================================================================================== */
+#conservation {
+    padding: 100px 50px
+    
+}
 
 
 
-/* Close media styling */
-.close-media {
-    font-size: 3em;
-    font-weight: bold;
-    position: absolute;
+.conservation-content {
+    margin: auto;
+    width: 50vw;
+    height: 50vh;
+}
+
+
+.conservation-content:nth-of-type(1) {
+    margin: auto;
+}
+
+.conservation-content > h1 {
+    text-transform: uppercase;
+    font-size: 1.8em;
+    background-color: var(--champagne);
+    padding: 20px 50px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.conservation-content > p {
+    font-size: 1.8em;
     color: white;
-    top: 100px;
-    left: 0;
-    height: 70px;
-    transition: 0.5s ease-in-out;
-    width: 100%;
-}
-
-.close-media:hover {
-    cursor: pointer;
-    rotate: 360deg;
-    scale: 1.3;
-    opacity: .7;
 }
 
 
-/* ============================================================================================== */
-/* ================================ Conservation home layout ========================================= */
-/* ============================================================================================== */
 
-.conservation-home-content {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================================================================================================== */
+/* ================================ About section layout ======================================== */
+/* ===================================================================================================== */
+
+ #about {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('images/c3.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 50vh;
-    width: 50vw;
-}
-
-@media screen and (max-width: 1024px) {
-   
-    .conservation-home-content {
-        height: 70vh;
-        width: 80vw;
-    }
-}
-
-@media screen and (max-width: 768px) {
-   
-    .conservation-home-content {
-        height: 40vh;
-        width: 95vw;
-    }
-}
-
-
-/* ======================== Coservation content - habitat, education, livelihood, sustainability, about =============================== */
-
-.conservation-habitat-content,
-.conservation-education-content,
-.conservation-livelihood-content,
-.conservation-sustainability-content,
-.about-content {
     
+ background-color: white;
+}
+
+.about-content {
     width: 70vw;
     display: flex;
     flex-direction: column;
@@ -952,17 +882,18 @@ animation: timelinePulse 1s ease infinite;
     padding: 0px 100px;
 }
 
-.content-wrapper > h1 {
+.about-content > h1 {
     text-transform: uppercase;
+    font-size: 1.8em;
     color: var(--champagne);
 }
 
-.content-wrapper > p {
-    font-size: 1em;
+.about-content > p {
+    font-size: 1.8em;
     font-weight: normal;
 }
 
-.get-involved, .newsletter {
+.get-involved {
     padding: 7px 12px;
     border-radius: 10px;
     font-size: 1em;
@@ -983,21 +914,15 @@ animation: timelinePulse 1s ease infinite;
     opacity: .7;
 }
 
-.newsletter {
-    background-color: white;
-    color: var(--champagne);
-    border: solid 1px var(--champagne);
-    margin-left: 50px;
-}
 
-.newsletter:hover, .get-involved:hover {
+.get-involved:hover {
     cursor: pointer;
     opacity: .7;
 }
 
 @media screen and (max-width: 1024px) {
 
-    .content-wrapper {
+    .about-content {
         width: 100vw;
         justify-content: center;
         align-items: left;
@@ -1008,41 +933,45 @@ animation: timelinePulse 1s ease infinite;
 
 @media screen and (max-width: 768px) {
 
-    .content-wrapper {
+    .about-content {
         padding: 20px;
     }
 
-    .content-wrapper > h1 {
+    .about-content > h1 {
         font-size: 1.2em;
     }
     
-    .content-wrapper > p {
+    .about-content > p {
         font-size: .8em;
     }
 
-    .get-involved, .newsletter {
+    .get-involved {
         font-size: .8em;
     }
 }
 
 @media screen and (max-width: 450px) {
-    .content-wrapper > h1 {
+    .about-content > h1 {
         font-size: 1.2em;
     }
     
-    .content-wrapper > p {
+    .about-content > p {
         font-size: .8em;
     }
 
-    .get-involved, .newsletter {
+    .get-involved {
         font-size: .8em;
     }
 }
 
 
-/* ======================================================================================== */
-/* ================================ Contact Layout ========================================= */
-/* ======================================================================================== */
+/* ============================================================================================== */
+/* ================================ Contact section Layout ====================================== */
+/* ============================================================================================== */
+#contact {
+   height: 100vh;
+}
+
 .contact-content {
     padding: 200px 50px 50px 50px;
     text-align: center;
@@ -1050,7 +979,7 @@ animation: timelinePulse 1s ease infinite;
 }
 
 .contact-form {
-    width: 80%;
+    margin: auto;
 }
 
 .contact-form > input {
@@ -1100,9 +1029,8 @@ animation: timelinePulse 1s ease infinite;
 
 
 
-/* ======================================================================================== */
+
 /* ================================ Keyframes ============================================= */
-/* ======================================================================================== */
 
 /*  Timeline */
 @keyframes timelinePulse {
@@ -1126,4 +1054,11 @@ animation: timelinePulse 1s ease infinite;
       transform: scale(2);
       opacity: 0.4;
     }
+}
+
+/* ================================ Footer ============================================= */
+footer {
+    height: 4vh;
+    color: white;
+    text-align: center;
 }
