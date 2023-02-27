@@ -157,10 +157,10 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
 .home-item {
     position: absolute;
     bottom: 160px;
-    padding: 15px 100px;
+    padding: 10px 40px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 50px;
+    border-radius: 30px;
 }
 
 #home h1 {
@@ -189,8 +189,7 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
     }
 
     .home-item {
-        width: 100%;
-        padding-top: 110px;
+        width: 95%;
     }
 
     .home-image {
@@ -750,11 +749,9 @@ animation: timelinePulse 1s ease infinite;
     box-shadow: 0 4px 4px -4px var(--champagne);
 }
 
-
-
 .conservation-content {
     margin: auto;
-    width: 50vw;
+    width: 60vw;
     height: 50vh;
 }
 
@@ -775,22 +772,28 @@ animation: timelinePulse 1s ease infinite;
 .conservation-content > p {
     font-size: 1.8em;
     color: white;
+    text-align: center;
 }
 
+@media screen and (max-width: 1024px) {
+    .conservation-content {
+        width: 95vw;
+    }
 
+    #conservation {
+        padding: 100px 0px;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (max-width: 768px) {
+    .conservation-content > h1 {
+        font-size: 1.2em;
+    }
+    
+    .conservation-content > p {
+        font-size: 1em;
+    }
+}
 
 
 /* ===================================================================================================== */
@@ -909,7 +912,6 @@ animation: timelinePulse 1s ease infinite;
 .contact-content {
     padding: 200px 50px 50px 50px;
     text-align: center;
-    
 }
 
 .contact-form {
@@ -939,10 +941,10 @@ animation: timelinePulse 1s ease infinite;
     padding: 30px 0;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
 
     .contact-content {
-        padding-top: 150px
+        padding: 150px 0 0 0;
     }
 
     .contact-form {
@@ -953,16 +955,6 @@ animation: timelinePulse 1s ease infinite;
         width: 90%;
     }
 }
-
-@media screen and (max-width: 500px) {
-
-    .contact-content {
-        padding-top: 100px
-    }
-}
-
-
-
 
 /* ================================ Keyframes ============================================= */
 
