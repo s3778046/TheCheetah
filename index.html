@@ -4,299 +4,346 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0/dist/themes/light.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0/dist/themes/light.css">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/b4eff55874.js"></script>
-    <title>Cheetah</title>
+    <title>Cheetah | Threats & Conservation</title>
 </head>
-        <!-- Header section -->
-        <header>
+<body>
+    <!-- Header section -->
+    <header>
 
-            <!-- Logo image -->
-            <div id="logo">
-                <img src="images/logo.png" href="home.html" alt="">
-            </div>
-
-            <!-- Main navigation bar -->
-            <nav>
-                <ul>
-                    <li><a class="nav-item active" href="#home">home</a></li>
-                    <li><a class="nav-item" href="#cheetah">the cheetah</a></li>
-                    <li><a class="nav-item" href="#conservation">conservation</a></li>
-                    <li><a class="nav-item" href="#about">about iwaf</a></li>
-                    <li><a class="nav-item" href="#contact">contact</a></li>
-                </ul>
-                <div id="menu"><img src="images/menu.png" alt=""></div>
-            </nav>
-
-            <!-- Dropdown navigation bar -->
-            <div id="dropdown-menu">
-                <img id="close" src="images/close.png" alt="" onclick="closeMenu()">
-                <ul>
-                    <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#home">Home</a></li>
-                    <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#cheetah">The Cheetah</a></li>
-                    <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#conservation">Conservation</a></li>
-                    <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#about">About IWAF</a></li>
-                    <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </header>
-
-
-        <div id="page-wrapper">
-
-            <!-- Home section -->
-            <section id="home">
-                <div class="page-container home-content"> 
-                    <div class="home-item">
-                        <h1>The Cheetah</h1>
-                        <h4>Threats & Conservation</h4>
-                    </div> 
-                </div>
-            </section>
-            
-            <!-- ************************************************* Cheetah section ********************************************************* -->
-            <section id="cheetah">
-                
-                <!-- Cheetah Home page -->
-                <div id="cheetah-home" class="center">
-                    <div class="cheetah-home-content"></div>
-                </div>
-
-                <!-- Cheetah Characteristics page -->
-                <div id="characteristics">
-                    <div class="cheetah-characteristics-content">
-
-                        <div class="characteristics-img"></div>
-                        <sl-tab-group>
-                            <sl-tab slot="nav" panel="lifespan">Lifespan</sl-tab>
-                            <sl-tab slot="nav" panel="speed">Speed</sl-tab>
-                            <sl-tab slot="nav" panel="color">Color</sl-tab>
-                            <sl-tab slot="nav" panel="habitat">Habitat</sl-tab>
-                            <sl-tab slot="nav" panel="size">Size</sl-tab>
-                            <sl-tab slot="nav" panel="diet">Diet</sl-tab>
-                            <sl-tab slot="nav" panel="weight">Weight</sl-tab>
-                            <sl-tab slot="nav" panel="predators">Predators</sl-tab>
-                            
-                            
-                            <!-- https://factanimal.com/cheetahs/ -->
-                            <sl-tab-panel name="lifespan">Cheetahs have a lifespan of 15 - 20 years </sl-tab-panel>
-                            <sl-tab-panel name="speed">Cheetahs have a top speed of 105kph (65 mph) </sl-tab-panel>
-                            <sl-tab-panel name="color">Cheetahs color pattern is predominately tan with black spots</sl-tab-panel>
-                            <sl-tab-panel name="habitat">Cheetahs live in dry grasslands, scrub forest and savanahs</sl-tab-panel>
-                            <sl-tab-panel name="size">Cheetahs range in size from 112 -150 cm (45 - 60 inches)</sl-tab-panel>
-                            <sl-tab-panel name="diet">Gazelles, wildebeest, impalas, rabbits, birds, hares, antelopes, & warthogs</sl-tab-panel>
-                            <sl-tab-panel name="weight">46 - 159 pounds (21 - 72 kg)</sl-tab-panel>
-                            <sl-tab-panel name="predators">Lions, leopards, hyenas, eagles</sl-tab-panel>
-                        </sl-tab-group>
-                    </div>
-                </div>
-
-                <!--  Cheetah Regions page  -->
-                <div id="regions">
-                    <div class="cheetah-regions-content">
-                        <div class="region-tooltip-content default">
-                            <h1>Hotspots</h1>
-                            <p>Click on a hotspot to reveal data on the selected region.</p>
-                        </div>
-    
-                        <div class="region-tooltip-content western">
-                            <h1>Western, central & northern Africa</h1>
-                            <p>There is less than 500 surviving cheetahs in Western, central & northern Africa</p>
-                        </div>
-    
-                        <div class="region-tooltip-content southern">
-                            <h1>Southern Africa</h1>
-                            <p>There is less than 4,000 surviving cheetahs in southern Africa</p>
-                        </div>
-    
-                        <div class="region-tooltip-content eastern">
-                            <h1>Eastern Africa</h1>
-                            <p>There is less than 2,000 surviving cheetahs in southern Africa</p>
-                        </div>
-
-                        <div class="region-tooltip-content iran">
-                            <h1>Iran</h1>
-                            <p>There is less than 70 surviving cheetahs in Iran</p>
-                        </div>
-    
-                        
-    
-                        <div class="region-image-wrapper">
-                            <div class="spot"><sl-tooltip content="Western Africa"><sl-button onclick="displayHotSpotData('.western')"></sl-button></sl-tooltip></div> 
-                            <div class="spot"><sl-tooltip content="Southern Africa"><sl-button onclick="displayHotSpotData('.southern')"></sl-button></sl-tooltip></div>
-                            <div class="spot"><sl-tooltip content="Eastern Africa"><sl-button onclick="displayHotSpotData('.eastern')"></sl-button></sl-tooltip></div>
-                            <div class="spot"><sl-tooltip content="Iran"><sl-button onclick="displayHotSpotData('.iran')"></sl-button></sl-tooltip></div> 
-                        </div>
-                    </div>
-                </div>
-
-                <!--  Cheetah population page  -->
-                <div id="population">
-                    <div class="cheetah-population-content">
-                        <h1 class="headings">Cheetah population</h1>
-
-                        <!-- Timeline wrapper -->
-                        <div class="timeline" id="timeline">
-
-                            <!-- Timeline components -->
-                            <div class="bar"><span class="tip" onclick="togglePopulation(0, '100,000')"></span>1900</div>
-                            <div class="bar"><span class="tip" onclick="togglePopulation(1, '75,000')"></span>1920</div>
-                            <div class="bar"><span class="tip" onclick="togglePopulation(2, '50,000')"></span>1940</div>
-                            <div class="bar"><span class="tip" onclick="togglePopulation(3, '35,000')"></span>1970</div>
-                            <div class="bar"><span class="tip" onclick="togglePopulation(4, '18,000')"></span>2000</div>
-                            <div class="bar"><span class="tip population-active" onclick="togglePopulation(5, '7,000')"></span>2023</div>
-                        </div>  
-                        <h1 class="population-number">7,000</h1>
-                    </div>
-                </div>
-
-                <!--  Cheetah Gallery page  -->
-                <div id="gallery">
-                    <div class="cheetah-gallery-content center">
-                        
-
-                        <div class="gallery-image">
-                            <p class="close-image center" onclick="closeImage()">X</p>
-                            <img id="main-img" src="" alt="Main Image">
-                        </div>
-                
-                        <!-- Slider with images and  -->
-                        <div id="slider">
-                
-                            <!--  Left arrow -->
-                            <div id="left-arrow"><i class="fas fa-angle-left"></i></div>
-                
-                            <!-- Images -->
-                            <div id="slider-images">
-                                <img class="slider-img img1" src="./images/slider_images/s1.jpg" alt="Cheetah 1">
-                                <img class="slider-img img2" src="./images/slider_images/s2.jpg" alt="Cheetah 2">
-                                <img class="slider-img img3" src="./images/slider_images/s3.jpg" alt="Cheetah 3">
-                                <img class="slider-img img4" src="./images/slider_images/s4.jpg" alt="Cheetah 4">
-                                <img class="slider-img img5" src="./images/slider_images/s5.jpg" alt="Cheetah 5">
-                                <img class="slider-img img6" src="./images/slider_images/s6.jpg" alt="Cheetah 6">
-                                <img class="slider-img img7" src="./images/slider_images/s7.jpg" alt="Cheetah 7">
-                                <img class="slider-img img8" src="./images/slider_images/s8.jpg" alt="Cheetah 8">
-                                <img class="slider-img img9" src="./images/slider_images/s9.jpg" alt="Cheetah 9">
-                                
-                            </div>
-                
-                            <!-- Right arrow -->
-                            <div id="right-arrow"><i class="fas fa-angle-right"></i></div> 
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-            
-            <!-- ************************************************Conservation section ****************************************************** -->
-            <section id="conservation">
-                
-                
-
-                    <!-- Cheetah Threats page -->
-                    <div class="conservation-content threats">
-                        <h1>Threats</h1>
-                        <p>
-                            Some of the most significant threats to the cheatah include; Hunting and poaching, farmers protecting livestock, climate change, the destruction of habitat, low rate of reproductive 
-                            success compared to other mammals.
-                        </p>
-                    </div>
-                
-
-                    <!-- Cheetah education page -->
-                    <div class="conservation-content education">
-                        <h1>Education</h1>
-                        <p>
-                           Education is vital to the survival of the cheetah, research shows that puplic education will help ensure the survival
-                           of the cheetah into the future.
-                        </p>
-                    </div>
-                
-
-                    <!-- Cheetah liveilhood page -->
-                    <div class="conservation-content livelihood">
-                        <h1>Livelihood Program</h1>
-                        <p>
-                            A major key to ensuring the survival of the cheetah into the future is to secure the livelihood of people who share 
-                            habitat with the species. People who develop livelihood skills without the need to exploit the cheetah for income will 
-                            have a major impact on the survival of the species.
-                        </p>
-                    </div>
-                
-
-                    <!-- Cheetah sustainability page -->
-                    <div class="conservation-content sustainability">
-                        <h1>Cheetah sustainability program</h1>
-                        <p>
-                        
-                            The cheetah sustainability program is a breeding program to support conservation of the cheetah and ensure the 
-                            survival of the species. Litters of cheetahs are being breed in large breeding centers to help the repopulation of the species.
-                            
-                        </p>
-                   
-                </div> 
-
-                <!-- Cheetah sustainability page -->
-                <!-- https://cheetah.org/canada/about-us/ -->
-                <div class="conservation-content livestock">
-                    <h1>Livestock guarding dogs</h1>
-                    <p>
-                        The livestock guarding dog program is a non lethal predator control method that helps farmers and wildlife co-exist peacefully. 
-                        The guard dogs reduce the cheetahs ability to get close to farm animals reducing the need for farmers to kill cheetahs to protect 
-                        there livestock.
-                    </p>
-               
-            </div> 
-            </section>
-
-            <!-- About section -->
-            <section id="about">
-                <div class="about-content">
-                    <h1>About IFAW</h1>
-                    <p>
-                        The International fund for animal welfare (IFAW), is a global not for profit organisation with the sole focus of helping 
-                        animals and people to co-exist peacefully together. Through partnerships with governments, communities, and 
-                        businesses, IFAW are focused on animal conservation and welfare to help all species of animal’s flourish into the future
-                    </p>
-                </div>
-            </section>
-
-            <!-- Contact section -->
-            <section id="contact">
-
-                <!-- Open dialog box content -->
-                <sl-dialog label="Success" class="dialog-overview">
-                    Enquiry lodged
-                    <sl-button slot="footer" variant="primary">Close</sl-button>
-                </sl-dialog>
-
-                <div class="contact-content">
-                    <p>If you would like to get involved with conservation please contact us</p>
-
-                    <div class="contact-form">
-                        <input type="text" id="fname" placeholder="First Name"><br><br>
-                        <input type="text" id="lname" placeholder="First Name"><br><br>
-                        <input type="text" id="email" placeholder="Email"><br><br>
-                        <input type="text" id="message" placeholder="Message"><br><br>
-                    </div>
-                    <sl-button>Submit</sl-button>
-                </div>
-            </section>
-
-            <!-- Footer section section -->
-            <footer>
-                <img src="images/logo.png" href="home.html" alt="" style="width: 70px;">
-                <p>&copy 2022 Mark McLachlan</p>
-            </footer>
+        <!-- Logo image -->
+        <div id="logo">
+            <img src="images/logo.png"  alt="Logo">
         </div>
-        
-        <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0/dist/shoelace.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 
+        <!-- Main navigation bar -->
+        <nav>
+            <ul>
+                <li><a class="nav-item active" href="#home">home</a></li>
+                <li><a class="nav-item" href="#cheetah">the cheetah</a></li>
+                <li><a class="nav-item" href="#conservation">conservation</a></li>
+                <li><a class="nav-item" href="#about">about iwaf</a></li>
+                <li><a class="nav-item" href="#contact">contact</a></li>
+            </ul>
+            <div id="menu"><img src="images/menu.png" alt=""></div>
+        </nav>
+
+        <!-- Dropdown navigation bar -->
+        <div id="dropdown-menu">
+            <img id="close" src="images/close.png" alt="" onclick="closeMenu()">
+            <ul>
+                <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#home">Home</a></li>
+                <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#cheetah">The Cheetah</a></li>
+                <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#conservation">Conservation</a></li>
+                <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#about">About IWAF</a></li>
+                <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page rapper to contain all content -->
+    <div id="page-wrapper">
+
+        <!-- Home section -->
+        <section id="home">
+            <div class="page-container home-content"> 
+                <div class="home-item">
+                    <h1>The Cheetah</h1>
+                    <h4>Threats & Conservation</h4>
+                </div> 
+            </div>
+        </section>
+        
+        <!-- ************************************************* Cheetah section ********************************************************* -->
+        <section id="cheetah">
+            
+            <!-- Cheetah Characteristics page -->
+            <div id="characteristics">
+
+                <!-- All characteristic content -->
+                <div class="cheetah-characteristics-content">
+
+                    <!-- Characteristic heading -->
+                    <div class="heading-container center">
+                        <div class="cheetah-heading">Characteristics</div>
+                    </div>
+                    
+                    <!-- Shoelace tab panel component (Tabs) -->
+                    <div class="characteristics-img"></div>
+                    <sl-tab-group>
+                        <sl-tab slot="nav" panel="lifespan">Lifespan</sl-tab>
+                        <sl-tab slot="nav" panel="speed">Speed</sl-tab>
+                        <sl-tab slot="nav" panel="color">Color</sl-tab>
+                        <sl-tab slot="nav" panel="habitat">Habitat</sl-tab>
+                        <sl-tab slot="nav" panel="size">Size</sl-tab>
+                        <sl-tab slot="nav" panel="diet">Diet</sl-tab>
+                        <sl-tab slot="nav" panel="weight">Weight</sl-tab>
+                        <sl-tab slot="nav" panel="predators">Predators</sl-tab>
+                        
+                        <!-- Shoelace tab panel component (Panels) -->
+                        <sl-tab-panel name="lifespan">Cheetahs have a lifespan of 15 - 20 years </sl-tab-panel>
+                        <sl-tab-panel name="speed">Cheetahs have a top speed of 105kph (65 mph) </sl-tab-panel>
+                        <sl-tab-panel name="color">Cheetahs color pattern is predominately tan with black spots</sl-tab-panel>
+                        <sl-tab-panel name="habitat">Cheetahs live in dry grasslands, scrub forest and savanahs</sl-tab-panel>
+                        <sl-tab-panel name="size">Cheetahs range in size from 112 -150 cm (45 - 60 inches)</sl-tab-panel>
+                        <sl-tab-panel name="diet">Gazelles, wildebeest, impalas, rabbits, birds, hares, antelopes, & warthogs</sl-tab-panel>
+                        <sl-tab-panel name="weight">46 - 159 pounds (21 - 72 kg)</sl-tab-panel>
+                        <sl-tab-panel name="predators">Lions, leopards, hyenas, eagles</sl-tab-panel>
+                    </sl-tab-group>
+                </div>
+            </div>
+
+            <!--  Cheetah Regions page  -->
+            <div id="regions">
+
+                <!--  All regions content -->
+                <div class="cheetah-regions-content">
+
+                    <!-- Reagions main heading -->
+                    <div class="heading-container center">
+                        <div class="cheetah-heading">Regions</div>
+                    </div>
+
+                    <!-- Markup for Dynamic content selcected by hotspots-->
+                    <div class="region-tooltip-content default">
+                        <h1>Hotspots</h1>
+                        <p>Click on a hotspot to reveal data on the selected region.</p>
+                    </div>
+
+                    <!-- Markup for Dynamic content selcected by hotspots-->    
+                    <div class="region-tooltip-content western">
+                        <h1>Western, central & northern Africa</h1>
+                        <p>There is less than 500 surviving cheetahs in Western, central & northern Africa</p>
+                    </div>
+
+                    <!-- Markup for Dynamic content selcected by hotspots-->
+                    <div class="region-tooltip-content southern">
+                        <h1>Southern Africa</h1>
+                        <p>There is less than 4,000 surviving cheetahs in southern Africa</p>
+                    </div>
+
+                    <!-- Markup for Dynamic content selcected by hotspots-->
+                    <div class="region-tooltip-content eastern">
+                        <h1>Eastern Africa</h1>
+                        <p>There is less than 2,000 surviving cheetahs in eastern Africa</p>
+                    </div>
+
+                    <!-- Markup for Dynamic content selcected by hotspots-->
+                    <div class="region-tooltip-content iran">
+                        <h1>Iran</h1>
+                        <p>There is less than 70 surviving cheetahs in Iran</p>
+                    </div>
+
+                    <!-- Region hotspot markup -->
+                    <div class="region-image-wrapper">
+
+                        <!-- Shoelace tooltip components -->
+                        <div class="spot">
+                            <sl-tooltip content="Western Africa">
+                                <sl-button onclick="displayHotSpotData('.western')"></sl-button>
+                            </sl-tooltip>
+                        </div> 
+
+                        <!-- Shoelace tooltip components -->
+                        <div class="spot">
+                            <sl-tooltip content="Southern Africa">
+                                <sl-button onclick="displayHotSpotData('.southern')"></sl-button>
+                            </sl-tooltip>
+                        </div>
+
+                        <!-- Shoelace tooltip components -->
+                        <div class="spot">
+                            <sl-tooltip content="Eastern Africa">
+                                <sl-button onclick="displayHotSpotData('.eastern')"></sl-button>
+                            </sl-tooltip>
+                        </div>
+
+                        <!-- Shoelace tooltip components -->
+                        <div class="spot">
+                            <sl-tooltip content="Iran">
+                                <sl-button onclick="displayHotSpotData('.iran')"></sl-button>
+                            </sl-tooltip>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <!--  Cheetah population page  -->
+            <div id="population">
+
+                <!-- All population content -->
+                <div class="cheetah-population-content">
+
+                    <!-- Main population heading -->
+                    <div class="heading-container center">
+                        <div class="cheetah-heading">Population</div>
+                    </div>
+
+                    <!-- Timeline wrapper -->
+                    <div class="timeline" id="timeline">
+
+                        <!-- Timeline components -->
+                        <div class="bar"><span class="tip" onclick="togglePopulation(0, '100,000')"></span>1900</div>
+                        <div class="bar"><span class="tip" onclick="togglePopulation(1, '75,000')"></span>1920</div>
+                        <div class="bar"><span class="tip" onclick="togglePopulation(2, '50,000')"></span>1940</div>
+                        <div class="bar"><span class="tip" onclick="togglePopulation(3, '35,000')"></span>1970</div>
+                        <div class="bar"><span class="tip" onclick="togglePopulation(4, '18,000')"></span>2000</div>
+                        <div class="bar"><span class="tip population-active" onclick="togglePopulation(5, '7,000')"></span>2023</div>
+                    </div>  
+
+                    <!-- Dynamic population figure -->
+                    <h1 class="population-number">7,000</h1>
+                </div>
+            </div>
+
+            <!--  Cheetah Gallery page  -->
+            <div id="gallery">
+
+                <!-- Main gallery heading -->
+                <div class="heading-container center">
+                    <div class="cheetah-heading">Gallery</div>
+                </div>
+
+                <!-- All gallery content -->
+                <div class="cheetah-gallery-content center">
+                    
+                    <!-- Full screen gallery image -->
+                    <div class="gallery-image">
+                        <p class="close-image center" onclick="closeImage()">X</p>
+                        <img id="main-img" src="images/home-img.png" alt="Main Image">
+                    </div>
+            
+                    <!-- Image carousel slider with 9 images -->
+                    <div id="slider">
+            
+                        <!--  Left arrow -->
+                        <div id="left-arrow"><i class="fas fa-angle-left"></i></div>
+            
+                        <!-- Images -->
+                        <div id="slider-images">
+                            <img class="slider-img img1" src="./images/slider_images/s1.jpg" alt="Cheetah 1">
+                            <img class="slider-img img2" src="./images/slider_images/s2.jpg" alt="Cheetah 2">
+                            <img class="slider-img img3" src="./images/slider_images/s3.jpg" alt="Cheetah 3">
+                            <img class="slider-img img4" src="./images/slider_images/s4.jpg" alt="Cheetah 4">
+                            <img class="slider-img img5" src="./images/slider_images/s5.jpg" alt="Cheetah 5">
+                            <img class="slider-img img6" src="./images/slider_images/s6.jpg" alt="Cheetah 6">
+                            <img class="slider-img img7" src="./images/slider_images/s7.jpg" alt="Cheetah 7">
+                            <img class="slider-img img8" src="./images/slider_images/s8.jpg" alt="Cheetah 8">
+                            <img class="slider-img img9" src="./images/slider_images/s9.jpg" alt="Cheetah 9">
+                        </div>
+            
+                        <!-- Right arrow -->
+                        <div id="right-arrow"><i class="fas fa-angle-right"></i></div> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ************************************************Conservation section ****************************************************** -->
+        <section id="conservation">
+
+                <!-- Conservation threats content -->
+                <div class="conservation-content threats">
+                    <h1>Threats</h1>
+                    <p>
+                        Some of the most significant threats to the cheatah include; Hunting and poaching, farmers protecting livestock, climate change, the destruction of habitat, low rate of reproductive 
+                        success compared to other mammals.
+                    </p>
+                </div>
+            
+                <!-- Conservation education content -->
+                <div class="conservation-content education">
+                    <h1>Education</h1>
+                    <p>
+                        Education is vital to the survival of the cheetah, research shows that puplic education will help ensure the survival
+                        of the cheetah into the future.
+                    </p>
+                </div>
+            
+
+                <!-- Conservation livelihood content -->
+                <div class="conservation-content livelihood">
+                    <h1>Livelihood Program</h1>
+                    <p>
+                        A major key to ensuring the survival of the cheetah into the future is to secure the livelihood of people who share 
+                        habitat with the species. People who develop livelihood skills without the need to exploit the cheetah for income will 
+                        have a major impact on the survival of the species.
+                    </p>
+                </div>
+
+                <!-- Conservation sustainability content -->
+                <div class="conservation-content sustainability">
+                    <h1>Sustainability program</h1>
+                    <p>
+                        The cheetah sustainability program is a breeding program to support conservation of the cheetah and ensure the 
+                        survival of the species. Litters of cheetahs are being breed in large breeding centers to help the repopulation of the species.
+                    </p>
+            </div> 
+
+            <!-- Conservation livestock content -->
+            <div class="conservation-content livestock">
+                <h1>Livestock guarding dogs</h1>
+                <p>
+                    The livestock guarding dog program is a non lethal predator control method that helps farmers and wildlife co-exist peacefully. 
+                    The guard dogs reduce the cheetahs ability to get close to farm animals reducing the need for farmers to kill cheetahs to protect 
+                    there livestock.
+                </p>
+            </div> 
+        </section>
+
+        <!-- About section -->
+        <section id="about">
+
+            <!-- All about content -->
+            <div class="about-content">
+                <h1>About IFAW</h1>
+                <p>
+                    The International fund for animal welfare (IFAW), is a global not for profit organisation with the sole focus of helping 
+                    animals and people to co-exist peacefully together. Through partnerships with governments, communities, and 
+                    businesses, IFAW are focused on animal conservation and welfare to help all species of animal’s flourish into the future
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section id="contact">
+            
+            <!-- All contact content -->
+            <div class="contact-content">
+                <h4>If you would like to get involved with conservation please contact us</h4>
+
+                <!-- Contact form -->
+                <div class="contact-form">
+                    <input type="text" id="fname" placeholder="First Name"><br><br>
+                    <input type="text" id="lname" placeholder="First Name"><br><br>
+                    <input type="text" id="email" placeholder="Email"><br><br>
+                    <input type="text" id="message" placeholder="Message"><br><br>
+                </div>
+            </div>
+
+            <!-- Open dialog box content -->
+            <sl-dialog label="Success" class="dialog-overview">Enquiry lodged<sl-button slot="footer" variant="primary">Close</sl-button></sl-dialog>
+
+            <!-- Dialog box button in a container to center it-->
+            <div class="center">
+                <sl-button style="text-align: center;">Submit</sl-button>
+            </div> 
+        </section>
+        
+
+        <!-- Footer section section -->
+        <footer>
+            <img src="images/logo.png" alt="Logo" style="width: 70px;">
+            <p>&copy; 2022 Mark McLachlan</p>
+        </footer>
+    </div>
+    
+    <!-- Javascript -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0/dist/shoelace.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="main.js"></script> 
 </body>
 </html>
-
-

@@ -1,21 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap');
 
+/* Default margins for all elements */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-:root {
-    --champagne: rgb(166, 121, 80);
-}
-
-.menu-active, .active {
-    color: var(--champagne);
-}
-
-.mobile-menu-active {
- background-color: var(--champagne);
 }
 
 body {
@@ -24,10 +13,55 @@ body {
     scroll-behavior: smooth;
 }
 
+/* Color variable */
+:root {
+    --champagne: rgb(166, 121, 80);
+}
+
+/* Active styling */
+ .active {
+    color: var(--champagne);
+}
+
+/* Flex class to center elements */
 .center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Main heading styling */
+.heading-container {
+    width: 100%;
+}
+
+.cheetah-heading {
+    width: 70%;
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 2px  rgb(0, 0, 0);
+    letter-spacing: 9px;
+    font-family: 'Cinzel', serif;
+    background-color:var(--champagne);
+    padding: 5px;
+    rotate: -2deg;
+    box-shadow: 5px 5px 12px white;
+}
+
+/* Media query */
+@media screen and (max-width: 768px) {
+    .cheetah-heading {
+        font-size: 2rem;
+        width: 90%;
+    }
+}
+
+/* Media query */
+@media screen and (max-width: 500px) {
+    .cheetah-heading {
+        font-size: .8rem;
+    }
 }
 
 /* ============================================================================================================== */
@@ -85,6 +119,7 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
     z-index: 10;
 }
 
+/* Media query */
 @media screen and (max-width: 768px) {
     nav ul  {
         display: none;
@@ -129,7 +164,6 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
     text-decoration: none;
 }
 
-
 /* ========================================================================================== */
 /* ================================ Home page section layout ======================================== */
 /* ========================================================================================== */
@@ -156,15 +190,20 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
 
 .home-item {
     position: absolute;
-    bottom: 160px;
-    padding: 10px 40px;
+    bottom: 70px;
+    width: 70%;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 30px;
+    text-shadow: 2px 2px 2px  rgb(0, 0, 0);
+    letter-spacing: 9px;
+    font-family: 'Cinzel', serif;
+    background-color:var(--champagne);
+    padding: 5px;
+    rotate: -2deg;
+    box-shadow: 5px 5px 12px white;
 }
 
 #home h1 {
-    color: var(--champagne);
+    color: white;
     font-size: 4rem;
     letter-spacing: 9px;
     font-family: 'Cinzel', serif;
@@ -179,10 +218,11 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
     font-style: italic;
     color: rgb(0, 0, 0);
     font-family: 'Cinzel', serif;
-    font-weight: 100;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px  rgb(255, 255, 255);
 }
 
-
+/* Media query */
 @media screen and (max-width: 768px) {
     .home-content {
         flex-direction: column;
@@ -206,6 +246,7 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
     }
 }
 
+/* Media query */
 @media screen and (max-width: 468px) {
 
     #home h1 {
@@ -223,8 +264,8 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
 #page-wrapper {
    overflow: hidden;
 }
-/* ================================ Cheetah characteristics styling ========================================= */
 
+/* ================================ Cheetah characteristics styling ========================================= */
 #characteristics {
     width: 100vw;
     height: 100vh;
@@ -233,7 +274,7 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
 
 .cheetah-characteristics-content {
     margin: auto;
-    padding-top: 150px;
+    padding-top: 75px;
 }
 
 .characteristics-img {
@@ -243,7 +284,7 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
     background-position: center;
     height: 250px;
     width: 100vw;
-    margin-bottom: 150px;
+    margin: 100px 0px;
 }
 
 #characteristics sl-tab-group {
@@ -280,6 +321,7 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
     font-size: 1.8rem;
 }
 
+/* Media query */
 @media screen and (max-width: 1024px) {
     #sl-tab-1::part(base),
     #sl-tab-2::part(base),
@@ -294,6 +336,7 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
     }
 }
 
+/* Media query */
 @media screen and (max-width: 768px) {
     #sl-tab-1::part(base),
     #sl-tab-2::part(base),
@@ -322,8 +365,6 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
      }
 }
 
-
-
 /* ================================ Cheetah region styling ================================================== */
 #regions {
     width: 100vw;
@@ -332,7 +373,7 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
 }
 
 .cheetah-regions-content {
-    margin-top: 100px;
+    margin-top: 50px;
     height: 80vh;
 }
 
@@ -361,9 +402,9 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    height: 100%;
+    height: 85%;
     width: 100%;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 #regions sl-button::part(base) {
@@ -375,22 +416,22 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
 /* Western */
 .spot:nth-of-type(1){
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: 36%;  
 }
 
 /* Southern */
 .spot:nth-of-type(2){
     position: absolute;
-    top: 78%;
-    left: 54%;
+    top: 80%;
+    left: 51%;
 }
 
 /*  Eastern */
 .spot:nth-of-type(3){
     position: absolute;
-    top: 40%;
-    left: 65%;
+    top: 45%;
+    left: 60%;
 }
 
 /*  Iran */
@@ -399,7 +440,6 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
     top: 20%;
     right: 20%;
 }
-
 
 #regions sl-button:after {
     content: "";
@@ -413,6 +453,7 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
     animation: pulse 1s ease infinite;
 }
 
+/* Media query */
 @media screen and (max-width: 1024px) {
     #regions {
         margin-top: 0px;
@@ -429,36 +470,37 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
     /* Western */
     .spot:nth-of-type(1){
         position: absolute;
-        top: 20%;
+        top: 30%;
         left: 30%;  
     }
 
     /* Southern */
     .spot:nth-of-type(2){
         position: absolute;
-        top: 65%;
+        top: 75%;
         left: 53%;
     }
 
     /*  Eastern */
     .spot:nth-of-type(3){
         position: absolute;
-        top: 35%;
+        top: 45%;
         left: 65%;
     }
 
     /*  Iran */
     .spot:nth-of-type(4){
         position: absolute;
-        top: 20px;
-        right: 40px;
+        top: 25%;
+        right: 20%;
     }
 }
 
+/* Media query */
 @media screen and (max-width: 678px) {
     .region-tooltip-content {
         text-align: center;
-        top: 57vh;
+        top: 67vh;
         left: 0;
         width: 100vw;
         padding: 0 5px;
@@ -471,38 +513,48 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
      /* Western */
      .spot:nth-of-type(1){
         position: absolute;
-        top: 15%;
+        top: 25%;
         left: 20%;  
     }
 
     /* Southern */
     .spot:nth-of-type(2){
         position: absolute;
-        top: 55%;
+        top: 65%;
         left: 53%;
     }
 
     /*  Eastern */
     .spot:nth-of-type(3){
         position: absolute;
-        top: 30%;
+        top: 40%;
         left: 70%;
     }
 
     /*  Iran */
     .spot:nth-of-type(4){
         position: absolute;
-        top: 20px;
-        right: 40px;
+        top: 20%;
+        right: 10%;
     }
 } 
 
-/* ================================ Cheetah population styling ================================================== */
+/* Media query */
+@media screen and (max-width: 430px) {
 
+   /* Southern */
+   .spot:nth-of-type(2){
+    position: absolute;
+    top: 60%;
+    left: 53%;
+    }
+}
+
+/* ================================ Cheetah population styling ================================================== */
 #population {
     width: 100vw;
     height: 100vh;
-    padding-top: 200px;
+    padding-top: 100px;
     box-shadow: 0 4px 4px -4px var(--champagne);
 }
 .cheetah-population-content {
@@ -541,7 +593,7 @@ animation: timelinePulse 1s ease infinite;
     align-items: center;
     justify-content: center;
     width: 80%;
-    margin: auto;
+    margin: 200px auto 100px auto;
 }
 
 .bar {
@@ -571,6 +623,7 @@ animation: timelinePulse 1s ease infinite;
     scale: 1.5;
 }
 
+/* Media query */
 @media screen and (max-width: 1024px) {
 
     .cheetah-population-content {
@@ -590,6 +643,7 @@ animation: timelinePulse 1s ease infinite;
     }
 }
 
+/* Media query */
 @media screen and (max-width: 768px) {
     
     .bar {
@@ -597,12 +651,14 @@ animation: timelinePulse 1s ease infinite;
     }
 }
 
+/* Media query */
 @media screen and (max-width: 500px) {
     .bar {
         padding: 30px 8px;
     }
 }
 
+/* Media query */
 @media screen and (max-width: 400px) {
     .bar {
         padding: 30px 5px;
@@ -614,22 +670,22 @@ animation: timelinePulse 1s ease infinite;
 }
 
 /* ================================ Cheetah gallery styling ================================================== */
-
 #gallery {
     height: 100vh;
     width: 100vw;
     position: relative;
+    margin-top: 130px;
     box-shadow: 0 4px 4px -4px var(--champagne);
 }
 
 .cheetah-gallery-content{
-    height: 100vh;
+    height: 80vh;
     width: 75vw;
     margin: auto;
 }
 
 #main-img {
-    height: 60%;
+    height: 70%;
     border: solid white 10px;
     transition: 0.5s;
 }
@@ -640,7 +696,7 @@ animation: timelinePulse 1s ease infinite;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 80vw;
+    width: 90vw;
 }
 
 #slider-images {
@@ -670,7 +726,6 @@ animation: timelinePulse 1s ease infinite;
 #left-arrow {
  text-align: right;
 }
-
 
 .fa-angle-left, .fa-angle-right {
     font-size: 50px; 
@@ -708,8 +763,8 @@ animation: timelinePulse 1s ease infinite;
     font-weight: bold;
     position: absolute;
     color: white;
-    top: 100px;
-    left: 0;
+    top: 10px;
+    left: 10px;
     height: 70px;
     transition: 0.5s ease-in-out;
     width: 100%;
@@ -722,6 +777,7 @@ animation: timelinePulse 1s ease infinite;
     opacity: .7;
 }
 
+/* Media query */
 @media screen and (max-width: 1024px) {
     .cheetah-gallery-content{
         height: 100vh;
@@ -729,17 +785,18 @@ animation: timelinePulse 1s ease infinite;
     }
 
     .slider-img {
-        width: 50%;
+        width: 100%;
     }
 }
 
-@media screen and (max-width: 1024px) {
+/* Media query */
+@media screen and (max-width: 768px) {
 
-    .slider-img {
-        width: 80%;
+    #slider {
+        flex-direction: column;
+        height: 50vh;
     }
-}
-
+} 
 
 /* ===================================================================================================== */
 /* ================================ Conservation section layout ======================================== */
@@ -755,7 +812,6 @@ animation: timelinePulse 1s ease infinite;
     height: 50vh;
 }
 
-
 .conservation-content:nth-of-type(1) {
     margin: auto;
 }
@@ -767,6 +823,9 @@ animation: timelinePulse 1s ease infinite;
     padding: 20px 50px;
     margin-bottom: 40px;
     text-align: center;
+    text-shadow: 2px 2px 2px  rgb(255, 255, 255);
+    font-family: 'Cinzel', serif;
+    box-shadow: 5px 5px 12px white;
 }
 
 .conservation-content > p {
@@ -775,6 +834,7 @@ animation: timelinePulse 1s ease infinite;
     text-align: center;
 }
 
+/* Media query */
 @media screen and (max-width: 1024px) {
     .conservation-content {
         width: 95vw;
@@ -785,6 +845,7 @@ animation: timelinePulse 1s ease infinite;
     }
 }
 
+/* Media query */
 @media screen and (max-width: 768px) {
     .conservation-content > h1 {
         font-size: 1.2em;
@@ -795,18 +856,15 @@ animation: timelinePulse 1s ease infinite;
     }
 }
 
-
 /* ===================================================================================================== */
 /* ================================ About section layout ======================================== */
 /* ===================================================================================================== */
-
  #about {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    
- background-color: white;
+    background-color: white;
 }
 
 .about-content {
@@ -814,7 +872,6 @@ animation: timelinePulse 1s ease infinite;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    
     gap: 50px;
     padding: 0px 100px;
 }
@@ -851,12 +908,12 @@ animation: timelinePulse 1s ease infinite;
     opacity: .7;
 }
 
-
 .get-involved:hover {
     cursor: pointer;
     opacity: .7;
 }
 
+/* Media query */
 @media screen and (max-width: 1024px) {
 
     .about-content {
@@ -868,6 +925,7 @@ animation: timelinePulse 1s ease infinite;
     }
 }
 
+/* Media query */
 @media screen and (max-width: 768px) {
 
     .about-content {
@@ -887,6 +945,7 @@ animation: timelinePulse 1s ease infinite;
     }
 }
 
+/* Media query */
 @media screen and (max-width: 450px) {
     .about-content > h1 {
         font-size: 1.2em;
@@ -900,7 +959,6 @@ animation: timelinePulse 1s ease infinite;
         font-size: .8em;
     }
 }
-
 
 /* ============================================================================================== */
 /* ================================ Contact section Layout ====================================== */
@@ -931,16 +989,16 @@ animation: timelinePulse 1s ease infinite;
     height: 50px;
 }
 
-
 .contact-form input:nth-of-type(4) {
     height: 150px
 }
 
-.contact-content > p {
+.contact-content > h4 {
     color: var(--champagne);
     padding: 30px 0;
 }
 
+/* Media query */
 @media screen and (max-width: 1024px) {
 
     .contact-content {
@@ -957,7 +1015,6 @@ animation: timelinePulse 1s ease infinite;
 }
 
 /* ================================ Keyframes ============================================= */
-
 /*  Timeline */
 @keyframes timelinePulse {
     0% {

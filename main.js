@@ -1,12 +1,7 @@
 // *************************************************************************************************
 //                              GSAP ScrollTrigger
 // *************************************************************************************************
-
-gsap.from("#home", {
-    duration: 1,
-    x: "-1500",
-    scrollTrigger: "#home"
-});
+gsap.registerPlugin(ScrollTrigger);
 
 gsap.from(".characteristics-img", {
     duration: 1,
@@ -26,9 +21,13 @@ gsap.from("#slider", {
     scrollTrigger: "#slider"
 });
 
-gsap.from(".timeline", {
+gsap.fromTo(".timeline", {
     duration: 1,
-    scale: "1.3",
+    scale: ".2",
+    scrollTrigger: ".timeline"
+}, {
+    duration: 1,
+    scale: "1",
     scrollTrigger: ".timeline"
 });
 
@@ -86,21 +85,17 @@ const tl = new TimelineLite();
 tl.from('header', 1, {
         y: '-400',
         ease: "bounce",  
-})
+});
 
 tl.from('.home-item', 1, {
-    y: '-400',
-    ease: "bounce",  
-}, "-=0.5")
+    y: '-1400', 
+}, "-=0.5");
 
 
-function animateTextFromLeft(section) {
-    const tl = new TimelineLite();
-    tl.from(section, 1, {
-        y: '-400',
-        ease: "bounce",  
-    })
-}
+tl.from('.home-content', 1, {
+    scale: '1.5', 
+}, "-=0.5");
+
 
 // ************************************************************************************
 //                      Dropdown menu functionality 
@@ -127,7 +122,7 @@ function closeMenu() {
 //                                  Activate links on scrolling
 // *************************************************************************************************
 const navLinks = document.querySelectorAll('.nav-item');
-const sections = document.querySelectorAll('section')
+const sections = document.querySelectorAll('section');
 
 window.addEventListener('scroll', () => {
     let currentSection = '';
@@ -145,29 +140,31 @@ window.addEventListener('scroll', () => {
 });
 
 
-// *************************************************************************************************
-//                              Region tooltips
-// *************************************************************************************************
+//  When region hotspot is clicked change content to chosen data.
 function displayHotSpotData(region) {
 
+    // Get elements and store in variable
     const countries = document.querySelectorAll('.region-tooltip-content');
+
+    // Loop through elements and display to none.
     countries.forEach(country => {
         country.style.display = 'none';
-    })
+    });
 
+    //  Get element to display and display it to block.
     const displayRegion = document.querySelector(region);
     displayRegion.style.display = 'block';
 
+    // GSAP animation.
     const tl = new TimelineLite();
     tl.from(region, 1, {
         y: '-400',
         ease: "bounce",  
-    })
+    });
 }
 
-// *************************************************************************************************
-//                                  Population timeline
-// *************************************************************************************************
+
+// When
 function togglePopulation(tipToActive, population){
 
     // Declare variable
@@ -190,7 +187,7 @@ function togglePopulation(tipToActive, population){
         x: '-500',
             rotate: '360',
             // ease: "bounce",  
-    })
+    });
 }
 
 // *************************************************************************************************
@@ -199,12 +196,12 @@ function togglePopulation(tipToActive, population){
 const images = document.querySelectorAll('.slider-img');
 const imageWrapper = document.querySelector('.gallery-image');
 images.forEach(image => {
-    image.addEventListener('click', e => {
+    image.addEventListener('click', function() {
         const img = document.querySelector('#main-img');
         img.src = image.src;
         imageWrapper.style.display = 'flex';
-    })
-})
+    });
+});
 
 // *************************************************************************************************
 //                              Image Slider
@@ -217,7 +214,7 @@ const allImages = document.querySelectorAll('.slider-img');
 selectorRight.addEventListener('click', function() {
 
     // Store last image in variable
-    const lastImageSrc = allImages[8].src
+    const lastImageSrc = allImages[8].src;
 
     // Loop through all iamges and change src to the next img src.
     for(let i = allImages.length; i > 0; i--) {
@@ -229,13 +226,13 @@ selectorRight.addEventListener('click', function() {
 
     // Change first img src to the src of the last img.
     allImages[0].src = lastImageSrc;
-})
+});
 
 // Functionality for image carousel Left click button.
 selectorLeft.addEventListener('click', function() {
 
     // Store last image in variable
-    const firstImageSrc = allImages[0].src
+    const firstImageSrc = allImages[0].src;
 
     // Loop through all iamges and change src to the next img src.
     for(let i = 0; i < allImages.length - 1; i++) {
@@ -245,27 +242,21 @@ selectorLeft.addEventListener('click', function() {
 
     // Change last img src to the src of the first img.
     allImages[8].src = firstImageSrc;
-})
+});
 
-function openVideo() {
-    const video = document.querySelector('.video-wrapper');
-    video.style.display = 'flex';
-}
-
-function closeVideo() {
-    const video = document.querySelector('.video-wrapper');
-    video.style.display = 'none';
-}
-
+// *************************************************************************************************
+//                              Close image
+// *************************************************************************************************
 function closeImage() {
     const img = document.querySelector('.gallery-image');
     img.style.display = 'none';
 }
 
-// Shoelace dialog box functionality.
+// *************************************************************************************************
+//                              Shoelace dialog box functionality.
+// *************************************************************************************************
 const dialog = document.querySelector('.dialog-overview');
 const openButton = dialog.nextElementSibling;
 const closeButton = dialog.querySelector('sl-button[slot="footer"]');
-
 openButton.addEventListener('click', () => dialog.show());
 closeButton.addEventListener('click', () => dialog.hide());
