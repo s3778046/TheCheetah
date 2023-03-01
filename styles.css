@@ -38,7 +38,7 @@ body {
 .cheetah-heading {
     width: 70%;
     text-align: center;
-    margin-top: 150px;
+    margin-top: 170px;
     color: white;
     font-size: 2.5rem;
     text-shadow: 2px 2px 2px  rgb(0, 0, 0);
@@ -310,7 +310,7 @@ path.clicked {
     background-position: center;
     height: 250px;
     width: 100vw;
-    margin: 100px 0px;
+    margin: 20px 0px;
 }
 
 #characteristics sl-tab-group {
@@ -399,7 +399,7 @@ path.clicked {
 }
 
 .cheetah-regions-content {
-    margin-top: 120px;
+    margin-top: 30px;
     height: 80vh;
 }
 
@@ -526,7 +526,7 @@ path.clicked {
 @media screen and (max-width: 678px) {
     .region-tooltip-content {
         text-align: center;
-        top: 67vh;
+        top: 58vh;
         left: 0;
         width: 100vw;
         padding: 0 5px;
@@ -818,7 +818,16 @@ animation: timelinePulse 1s ease infinite;
 
     #slider {
         flex-direction: column;
+        justify-content: start;
         height: 50vh;
+    }
+
+    .cheetah-gallery-content { 
+        margin-top: -150px;
+    }
+
+    #main-img {
+       width: 90vw;
     }
 } 
 
@@ -991,7 +1000,7 @@ animation: timelinePulse 1s ease infinite;
 }
 
 .contact-content {
-    padding: 200px 50px 50px 50px;
+    padding: 300px 50px 50px 50px;
     text-align: center;
 }
 
@@ -1025,7 +1034,7 @@ animation: timelinePulse 1s ease infinite;
 @media screen and (max-width: 1024px) {
 
     .contact-content {
-        padding: 150px 0 0 0;
+        padding: 200px 0 0 0;
     }
 
     .contact-form {
