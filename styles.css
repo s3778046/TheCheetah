@@ -38,6 +38,7 @@ body {
 .cheetah-heading {
     width: 70%;
     text-align: center;
+    margin-top: 150px;
     color: white;
     font-size: 2.5rem;
     text-shadow: 2px 2px 2px  rgb(0, 0, 0);
@@ -45,7 +46,7 @@ body {
     font-family: 'Cinzel', serif;
     background-color:var(--champagne);
     padding: 5px;
-    rotate: -2deg;
+    rotate: -1deg;
     box-shadow: 5px 5px 12px white;
 }
 
@@ -75,15 +76,15 @@ header {
     top: 0;
     left: 0;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0);
 }
 
-header img, #menu img {
+header img, #menu {
     height: 60px;
     position: absolute;
 }
 
-#menu img {
+#menu {
     display: none;
     right: 25px;
 }
@@ -119,13 +120,37 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
     z-index: 10;
 }
 
+/* Hamburger menu SVG animation */
+svg {
+    cursor:pointer;
+}
+
+path {
+    fill:none;
+    stroke:rgb(255, 255, 255);
+    stroke-dasharray:50 200;
+    stroke-dashoffset:0px;
+    stroke-width:7.5px;
+    transition:all .5s;
+}
+
+path.clicked {
+    stroke-dashoffset:-159px;
+    transition:all .5s;
+}
+
+#middle-stroke.clicked{
+    opacity:0;
+    stroke-dashoffset:51px;
+}
+
 /* Media query */
 @media screen and (max-width: 768px) {
     nav ul  {
         display: none;
     }
 
-    #menu img {
+    #menu {
         display: block;
     }
 }
@@ -134,12 +159,12 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
 #dropdown-menu {
     display: none;
     position: absolute;
-    width: 100vw;
-    min-height: 50vh;
-    background-color: white;
-    left: 0;
-    top: 80px;
+    left: 5vw;
+    top: 89px;
+    width: 90vw;
+    background-color: rgb(255, 255, 255);
     padding: 20px;
+    box-shadow: 2px 2px 5px var(--champagne);
 }
 
 #dropdown-menu img {
@@ -155,13 +180,14 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
 }
 
 #dropdown-menu ul li{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--champagne);
     padding: 15px;
     list-style: none;
 }
 
 #dropdown-menu ul li a{
     text-decoration: none;
+    color: black;
 }
 
 /* ========================================================================================== */
@@ -198,7 +224,7 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
     font-family: 'Cinzel', serif;
     background-color:var(--champagne);
     padding: 5px;
-    rotate: -2deg;
+    rotate: -1deg;
     box-shadow: 5px 5px 12px white;
 }
 
@@ -274,7 +300,7 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
 
 .cheetah-characteristics-content {
     margin: auto;
-    padding-top: 75px;
+    padding-top:40px;
 }
 
 .characteristics-img {
@@ -373,7 +399,7 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
 }
 
 .cheetah-regions-content {
-    margin-top: 50px;
+    margin-top: 120px;
     height: 80vh;
 }
 
@@ -554,7 +580,6 @@ nav ul li:hover, #menu img:hover, #dropdown-menu img:hover {
 #population {
     width: 100vw;
     height: 100vh;
-    padding-top: 100px;
     box-shadow: 0 4px 4px -4px var(--champagne);
 }
 .cheetah-population-content {
@@ -674,7 +699,6 @@ animation: timelinePulse 1s ease infinite;
     height: 100vh;
     width: 100vw;
     position: relative;
-    margin-top: 130px;
     box-shadow: 0 4px 4px -4px var(--champagne);
 }
 
@@ -919,7 +943,6 @@ animation: timelinePulse 1s ease infinite;
     .about-content {
         width: 100vw;
         justify-content: center;
-        align-items: left;
         gap: 20px;
         padding: 50px;
     }

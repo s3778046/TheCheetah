@@ -27,12 +27,21 @@
                 <li><a class="nav-item" href="#about">about iwaf</a></li>
                 <li><a class="nav-item" href="#contact">contact</a></li>
             </ul>
-            <div id="menu"><img src="images/menu.png" alt=""></div>
+            
+            <!-- Menu icon container-->
+            <div id="menu">
+
+                <!-- SVG menu icon -->
+                <svg height="50" width="75" viewbox="0 0 100 100">
+                    <path d="M20,25 L70,25 C 110 25, 110 110, 75 75 L20,25" stroke-linecap="square" id="top-stroke"></path>
+                    <path d="M20,50 L70,50" stroke-linecap="square" id="middle-stroke"></path>
+                    <path d="M20,75 L70,75 C 110 75, 110 -10, 70 25 L20,75" stroke-linecap="square" id="bottom-stroke"></path>
+                </svg>
+            </div>
         </nav>
 
         <!-- Dropdown navigation bar -->
         <div id="dropdown-menu">
-            <img id="close" src="images/close.png" alt="" onclick="closeMenu()">
             <ul>
                 <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#home">Home</a></li>
                 <li onclick="closeMenu()"><a class="nav-item-dropdown" href="#cheetah">The Cheetah</a></li>
@@ -62,13 +71,13 @@
             <!-- Cheetah Characteristics page -->
             <div id="characteristics">
 
+                <!-- Characteristic heading -->
+                <div class="heading-container center">
+                    <div class="cheetah-heading">Characteristics</div>
+                </div>
+
                 <!-- All characteristic content -->
                 <div class="cheetah-characteristics-content">
-
-                    <!-- Characteristic heading -->
-                    <div class="heading-container center">
-                        <div class="cheetah-heading">Characteristics</div>
-                    </div>
                     
                     <!-- Shoelace tab panel component (Tabs) -->
                     <div class="characteristics-img"></div>
@@ -98,13 +107,13 @@
             <!--  Cheetah Regions page  -->
             <div id="regions">
 
+                 <!-- Reagions main heading -->
+                 <div class="heading-container center">
+                    <div class="cheetah-heading">Regions</div>
+                </div>
+
                 <!--  All regions content -->
                 <div class="cheetah-regions-content">
-
-                    <!-- Reagions main heading -->
-                    <div class="heading-container center">
-                        <div class="cheetah-heading">Regions</div>
-                    </div>
 
                     <!-- Markup for Dynamic content selcected by hotspots-->
                     <div class="region-tooltip-content default">
@@ -173,13 +182,13 @@
             <!--  Cheetah population page  -->
             <div id="population">
 
+                 <!-- Main population heading -->
+                 <div class="heading-container center">
+                    <div class="cheetah-heading">Population</div>
+                </div>
+                
                 <!-- All population content -->
                 <div class="cheetah-population-content">
-
-                    <!-- Main population heading -->
-                    <div class="heading-container center">
-                        <div class="cheetah-heading">Population</div>
-                    </div>
 
                     <!-- Timeline wrapper -->
                     <div class="timeline" id="timeline">
